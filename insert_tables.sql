@@ -64,12 +64,12 @@ BEGIN TRY
         (3, 'The sword of kings',5.50 ,5.50 ,0);
 
     INSERT INTO ITEM_PRICE (item_id, price) VALUES
-        (6, 100000),
-        (7, 500.69),
-        (8, 9900000),
-        (9, 9999999),
-        (10, 54000),
-        (11, 100);
+        (0, 100000),
+        (1, 500.69),
+        (2, 9900000),
+        (3, 9999999),
+        (4, 54000),
+        (5, 100);
 	COMMIT TRANSACTION;
 END TRY
 BEGIN CATCH
