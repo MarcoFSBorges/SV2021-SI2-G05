@@ -9,7 +9,7 @@ AS BEGIN
                  @clan_name VARCHAR(20),
                  @clan_score int
 
-        if(ISNULL(@clanName, 'getCursor') = 'getCursor')
+        if(@clanName IS NULL)
             BEGIN
                 DECLARE get_NC CURSOR FOR
                     select clan_id, clan_name, clan_score
@@ -34,6 +34,6 @@ AS BEGIN
 end
 GO
 
-select * from dbo.f_getClanInfo (NULL);
+--select * from dbo.f_getClanInfo (NULL);
 
-select * from dbo.f_getClanInfo ('Moth Posse');
+--select * from dbo.f_getClanInfo ('Moth Posse');

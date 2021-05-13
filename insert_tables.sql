@@ -27,6 +27,16 @@ BEGIN TRY
         (54, 13, 52),
         (80, 13, 52);
 
+    INSERT INTO REGISTEREDPLAYER (player_id, login_id, life_points, strength_points, speed_points) VALUES
+       	(0, 0, 1, 1, 1),
+        (1, 0, 1, 1, 1),
+        (2, 0, 3, 3, 3),
+        (3, 0, 1, 1, 1),
+        (4, 0, 6, 6, 6),
+        (5, 0, 1, 1, 1),
+        (6, 0, 7, 7, 7),
+        (7, 0, 3, 3, 3);
+
     INSERT INTO CLAN (clan_name) VALUES
         ('Onyx Pygmy Squad'),
         ('Ivory Dragontooth'),
@@ -61,7 +71,7 @@ BEGIN TRY
         (4, 'Radiant Armor', 1.21, 8.00, 0.00),
         (2, 'Soccer Ball',10.00 ,0.00 ,60.00),
         (1, 'Invisibility Cap',0 ,0 ,8.40),
-        (3, 'The Sword of Kings',5.50 ,5.50 ,0);
+        (3, 'The sword of kings',5.50 ,5.50 ,0);
 
     INSERT INTO ITEM (name , bonus_life, bonus_strength, bonus_speed) VALUES
         ('Stick',5.50 ,5.50 ,0);

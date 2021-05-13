@@ -58,7 +58,7 @@ BEGIN TRY
             life_points INTEGER NOT NULL,
             strength_points INTEGER NOT NULL,
             speed_points INTEGER NOT NULL,
-            clan int default -1,
+            clan int default null,
             PRIMARY KEY (player_id),
             FOREIGN KEY (player_id) REFERENCES PLAYER(player_id),
             FOREIGN KEY (clan) REFERENCES CLAN(clan_id),
@@ -68,8 +68,8 @@ BEGIN TRY
         );
 
         CREATE TABLE NONREGISTEREDPLAYER(
-            player_id int,
-            name VARCHAR(30) default CONVERT(varchar(50), NEWID()),
+            player_id int default null,
+            name VARCHAR(50) default null,
             PRIMARY KEY (player_id),
             FOREIGN KEY (player_id) REFERENCES PLAYER(player_id)
         );
