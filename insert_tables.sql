@@ -61,7 +61,10 @@ BEGIN TRY
         (4, 'Radiant Armor', 1.21, 8.00, 0.00),
         (2, 'Soccer Ball',10.00 ,0.00 ,60.00),
         (1, 'Invisibility Cap',0 ,0 ,8.40),
-        (3, 'The sword of kings',5.50 ,5.50 ,0);
+        (3, 'The Sword of Kings',5.50 ,5.50 ,0);
+
+    INSERT INTO ITEM (name , bonus_life, bonus_strength, bonus_speed) VALUES
+        ('Stick',5.50 ,5.50 ,0);
 
     INSERT INTO ITEM_PRICE (item_id, price) VALUES
         (0, 100000),
