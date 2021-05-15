@@ -76,13 +76,13 @@ BEGIN TRY
         (2, 3, 5),
         (2, 4, 3);
 
-    INSERT INTO ITEM (player_id, name , bonus_life, bonus_strength, bonus_speed) VALUES
-        (1, 'Diamond Sword', 1.50, 8.20, 2.00),
-        (3, 'Magic Umbrella', 6.00, 2.40, 1.10),
-        (4, 'Radiant Armor', 1.21, 8.00, 0.00),
-        (2, 'Soccer Ball',10.00 ,0.00 ,60.00),
-        (1, 'Invisibility Cap',0 ,0 ,8.40),
-        (3, 'The sword of kings',5.50 ,5.50 ,0);
+    INSERT INTO ITEM (player_id, name , active, bonus_life, bonus_strength, bonus_speed) VALUES
+        (1, 'Diamond Sword',0 , 1.50, 8.20, 2.00),
+        (3, 'Magic Umbrella',1 , 6.00, 2.40, 1.10),
+        (4, 'Radiant Armor',1 , 1.21, 8.00, 0.00),
+        (2, 'Soccer Ball',1 ,10.00 ,0.00 ,60.00),
+        (1, 'Invisibility Cap',1 ,0 ,0 ,8.40),
+        (3, 'The sword of kings',0 ,5.50 ,5.50 ,0);
 
     INSERT INTO ITEM (name , bonus_life, bonus_strength, bonus_speed) VALUES
         ('Stick',5.50 ,5.50 ,0);
