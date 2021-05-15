@@ -1,3 +1,14 @@
+DELETE FROM ITEM_PRICE
+DELETE FROM ITEM
+DELETE FROM MATCH
+DELETE FROM TYPE
+DELETE FROM STATE
+DELETE FROM REGISTEREDPLAYER
+DELETE FROM CLAN
+DELETE FROM GLOBAL_CONFIGURATION
+DELETE FROM LOGIN
+DELETE FROM PLAYER
+
 set transaction isolation level serializable
 BEGIN TRY
 	BEGIN TRANSACTION
@@ -27,17 +38,7 @@ BEGIN TRY
         (54, 13, 52),
         (80, 13, 52);
 
-    INSERT INTO REGISTEREDPLAYER (player_id, login_id, life_points, strength_points, speed_points) VALUES
-       	(0, 0, 1, 1, 1),
-        (1, 0, 1, 1, 1),
-        (2, 0, 3, 3, 3),
-        (3, 0, 1, 1, 1),
-        (4, 0, 6, 6, 6),
-        (5, 0, 1, 1, 1),
-        (6, 0, 7, 7, 7),
-        (7, 0, 3, 3, 3);
-
-    INSERT INTO CLAN (clan_name) VALUES
+     INSERT INTO CLAN (clan_name) VALUES
         ('Onyx Pygmy Squad'),
         ('Ivory Dragontooth'),
         ('Gold Knife Crew'),
@@ -45,6 +46,16 @@ BEGIN TRY
         ('Flame Pincer Gang'),
         ('Cobalt Enigma Clan'),
         ('Gold Elephant Riders');
+
+    INSERT INTO REGISTEREDPLAYER (player_id, login_id, life_points, strength_points, speed_points, clan) VALUES
+       	(0, 0, 1, 1, 1, 1),
+        (1, 1, 1, 1, 1, 2),
+        (2, 2, 3, 3, 3, 6),
+        (3, 3, 1, 1, 1, 4),
+        (4, 4, 6, 6, 6, 3),
+        (5, 5, 1, 1, 1, 2),
+        (6, 6, 7, 7, 7, 1),
+        (7, 7, 3, 3, 3, 2);
 
     INSERT INTO STATE (state_id, state) VALUES
         (1, 'Por iniciar'),

@@ -108,6 +108,7 @@ BEGIN TRY
               item_id int IDENTITY(0,1),
               player_id int default null,  --pode existir item sem estar referênciado a um player, para dar opções por exemplo em menus em caixas, etc
               name varchar(100) NOT NULL,
+              active BIT default 0,
               bonus_life decimal(4, 2) default 0,
               bonus_strength decimal(4, 2) default 0,
               bonus_speed decimal(4, 2) default 0,

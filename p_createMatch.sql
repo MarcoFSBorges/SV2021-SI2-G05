@@ -39,9 +39,9 @@ as begin
             select @type_id = type_id from TYPE where description = @description
 
             --verificar se valores estão na tabela player
-            if((select count(*) from PLAYER where player_id = @player_two = 0)
+            if((select count(*) from PLAYER where player_id = @player_two) = 0
                    OR
-               (select count(*) from PLAYER where player_id = @player_one = 0))
+               (select count(*) from PLAYER where player_id = @player_one) = 0)
                 BEGIN
                      raiserror ('Players dont exist in the db', 16, 1)
                 END

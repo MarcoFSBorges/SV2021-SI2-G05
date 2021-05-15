@@ -6,6 +6,7 @@ as begin
         begin transaction
             if ((select player_id from dbo.ITEM where item_id = @item_id) IS NULL)
 				begin
+                    update dbo.ITEM set active = 0 where active = 1;
 					update dbo.ITEM set player_id = @player_id where item_id = @item_id
 				end
             else
