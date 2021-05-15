@@ -1,5 +1,3 @@
-
-
 create or alter function dbo.CheckMaxLevel(@level INTEGER, @life_points INTEGER, @strength_points INTEGER)
 returns int
 as begin
@@ -52,12 +50,12 @@ BEGIN TRY
         CREATE TABLE REGISTEREDPLAYER(
             player_id int,
             login_id int,
-            score INTEGER default 0,
-            level INTEGER default 1,
-            bank_balance INTEGER default 0,
-            life_points INTEGER NOT NULL,
-            strength_points INTEGER NOT NULL,
-            speed_points INTEGER NOT NULL,
+            score int default 0,
+            level int default 1,
+            bank_balance int default 0,
+            life_points int NOT NULL,
+            strength_points int NOT NULL,
+            speed_points int NOT NULL,
             clan int default null,
             PRIMARY KEY (player_id),
             FOREIGN KEY (player_id) REFERENCES PLAYER(player_id),
@@ -75,27 +73,27 @@ BEGIN TRY
         );
 
         CREATE TABLE STATE(
-            state_id integer primary key,
+            state_id int primary key,
             state varchar(20) not null
         );
 
         CREATE TABLE TYPE(
             type_id int primary key,
             description varchar(50) not null,
-            min_life_points INTEGER default 1,
-            min_strength_points INTEGER default 1,
-            min_speed_points INTEGER default 1,
+            min_life_points int default 1,
+            min_strength_points int default 1,
+            min_speed_points int default 1,
             CONSTRAINT chk_min_type CHECK (min_life_points >= 0 AND min_strength_points >= 0 AND min_speed_points >= 0)
         );
 
         CREATE TABLE MATCH(
             match_id int IDENTITY(0,1),
-            state_id integer,
+            state_id int,
             type_id int,
-            player_one INTEGER not null,
-            player_two INTEGER,
+            player_one int not null,
+            player_two int,
             start_time DATE default CURRENT_TIMESTAMP,
-            winner INTEGER,
+            winner int,
             PRIMARY KEY (match_id),
             FOREIGN KEY (state_id) REFERENCES STATE(state_id),
             FOREIGN KEY (type_id) REFERENCES TYPE(type_id),
