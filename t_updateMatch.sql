@@ -13,12 +13,13 @@ AS BEGIN
         RETURN @level
 end
 GO
-drop trigger updateMatch
+
+
 create or alter trigger updateMatch on MATCH
 instead of update
 AS BEGIN
     BEGIN try
-    set transaction isolation level READ COMMITTED
+    set transaction isolation level SERIALIZABLE
     declare @match_id int,
             @state_id int,
             @type_id int,
@@ -42,8 +43,7 @@ AS BEGIN
                                  where match_id = @match_id
 
                 --start time secalhar devia ser, tempo decorrido mas afetava outras partes da implementação
-                --assumi que caso o jogador perca, os seus atributos nao sao alterados
-                --o acrescimo no nivel devera ser uma valor fixo
+                --caso o jogador perca, os seus atributos nao sao alterados
                 update REGISTEREDPLAYER set level = dbo.f_getPlayerLevel(@winner),
                                             score += (select score from TYPE where type_id = @type_id),
                                             life_points += 1,

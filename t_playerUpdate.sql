@@ -40,7 +40,7 @@ go
 --insert into LOGIN (user_email, username, name, password, birthday) VALUES
 --('test1@gmail.com', 'testerDummy1', 'Tester test1', 'fdsadsadasdas1', '1950-05-03');
 
---insert into LOGIN DEFAULT VALUES ;
+--insert into LOGIN DEFAULT VALUES;
 
 ----------------
 
