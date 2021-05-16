@@ -8,8 +8,7 @@ BEGIN
     END
     RETURN @att;
 END
-
-use SI2_SemestreVerao
+GO
 
 create or alter view dbo.players_view as
     select r.player_id, r.login_id, r.score, r.level, r.bank_balance,
@@ -22,5 +21,15 @@ create or alter view dbo.players_view as
         LEFT JOIN (select player_id, item_id, name, bonus_life, bonus_strength, bonus_speed from ITEM where active = 1) i
             ON r.player_id = i.player_id)
 
+create or alter trigger update_players_view on players_view
+instead of update
+as begin
+    declare @item_id int
+    declare @player_id int
+    select @item_id = item_id from inserted
+    select @player_id = player_id from inserted
+    update ITEM set active = 1, player_id = @player_id where item_id = @item_id
+end
 
-select * from players_view;
+
+--select * from players_view;

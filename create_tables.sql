@@ -1,10 +1,10 @@
-create or alter function dbo.CheckMaxLevel(@level INTEGER, @life_points INTEGER, @strength_points INTEGER)
+create or alter function dbo.CheckMaxLevel(@level int, @life_points int, @strength_points int, @speed_points int)
 returns int
 as begin
     declare @max_level int
     set @max_level = (select top 1 max_level from GLOBAL_CONFIGURATION order by config_id desc)
 
-    if(@level <= @max_level and @life_points <= @max_level and @strength_points <= @max_level)
+    if(@level <= @max_level and @life_points <= @max_level and @strength_points <= @max_level and @speed_points <= @max_level)
         return 0
     return 1
 end
@@ -61,7 +61,7 @@ BEGIN TRY
             FOREIGN KEY (player_id) REFERENCES PLAYER(player_id),
             FOREIGN KEY (clan) REFERENCES CLAN(clan_id),
             FOREIGN KEY (login_id) REFERENCES LOGIN(login_id),
-            CONSTRAINT chk_max_level CHECK (dbo.CheckMaxLevel(level, life_points, strength_points) = 0), --usa cache
+            CONSTRAINT chk_max_level CHECK (dbo.CheckMaxLevel(level, life_points, strength_points, speed_points) = 0), --usa cache
             CONSTRAINT chk_balance_and_score CHECK (bank_balance >= 0 AND score >= 0)
         );
 
@@ -83,6 +83,7 @@ BEGIN TRY
             min_life_points int default 1,
             min_strength_points int default 1,
             min_speed_points int default 1,
+            score int default 0,
             CONSTRAINT chk_min_type CHECK (min_life_points >= 0 AND min_strength_points >= 0 AND min_speed_points >= 0)
         );
 

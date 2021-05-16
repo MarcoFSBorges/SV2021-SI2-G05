@@ -12,7 +12,18 @@ begin try
     drop table if exists LOGIN
     drop table if exists PLAYER
 
+    drop view if exists players
+    drop view if exists players_view
+    drop function if exists check_att
     drop function if exists CheckMaxLevel
+    drop procedure if exists createPlayerWithOptions
+    drop function if exists f_checkLevels
+    drop function if exists f_getClanInfo
+    drop procedure if exists p_createMatch
+    drop procedure if exists p_giveItemToPlayer
+    drop function if exists f_getPlayerLevel
+    drop trigger if exists updateMatch
+
 end try
 begin catch
     rollback

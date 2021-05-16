@@ -1,14 +1,3 @@
-DELETE FROM ITEM_PRICE
-DELETE FROM ITEM
-DELETE FROM MATCH
-DELETE FROM TYPE
-DELETE FROM STATE
-DELETE FROM REGISTEREDPLAYER
-DELETE FROM CLAN
-DELETE FROM GLOBAL_CONFIGURATION
-DELETE FROM LOGIN
-DELETE FROM PLAYER
-
 set transaction isolation level serializable
 BEGIN TRY
 	BEGIN TRANSACTION
@@ -71,7 +60,7 @@ BEGIN TRY
 
     INSERT INTO MATCH (state_id, type_id, player_one) VALUES
         (1, 1, 1),
-        (3, 2, 0),
+        (2, 2, 0),
         (4, 3, 2),
         (2, 3, 5),
         (2, 4, 3);
