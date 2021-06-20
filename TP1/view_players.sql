@@ -32,4 +32,4 @@ as begin
 end
 
 
---select * from players_view;
+select * from players_view;

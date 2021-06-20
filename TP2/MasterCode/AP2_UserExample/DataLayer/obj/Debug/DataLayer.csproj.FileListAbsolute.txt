@@ -1,0 +1,26 @@
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\DataLayer\bin\Debug\DataLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\DataLayer\bin\Debug\DataLayer.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\DataLayer\bin\Debug\Model.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\DataLayer\bin\Debug\Model.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete

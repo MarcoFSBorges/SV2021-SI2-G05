@@ -1,0 +1,32 @@
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\DataLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\Model.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\DataLayer.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\Model.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete

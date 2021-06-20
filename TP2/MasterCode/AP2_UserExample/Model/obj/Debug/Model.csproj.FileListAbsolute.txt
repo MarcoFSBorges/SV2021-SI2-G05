@@ -1,0 +1,17 @@
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\Model\bin\Debug\Model.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\Model\bin\Debug\Model.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\Model\obj\Debug\Model.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\Model\obj\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\Model\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\Model\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\Model\obj\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\AP2_UserExample\AP2_UserExample\Model\obj\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\Model\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\Model\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\Model\obj\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\Model\obj\Debug\Model.pdb

@@ -1,0 +1,42 @@
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\UnitTestProject.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\UnitTestProject.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\BusinessLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Model.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\DataLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\BusinessLayer.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Model.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\bin\Debug\DataLayer.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\obj\Debug\TestProject.csproj.CopyComplete
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\obj\Debug\UnitTestProject.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\obj\Debug\UnitTestProject.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\UnitTestProject\obj\Debug\TestProject.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\UnitTestProject.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\UnitTestProject.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\BusinessLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\DataLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\BusinessLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\bin\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\TestProject.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\TestProject.csproj.CopyComplete
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\UnitTestProject.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\UnitTestProject.pdb

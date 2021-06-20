@@ -1,0 +1,19 @@
+E:\work\si2\SI2_2021_SV\recursos\Exemplos ado.net\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.exe.config
+E:\work\si2\SI2_2021_SV\recursos\Exemplos ado.net\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.exe
+E:\work\si2\SI2_2021_SV\recursos\Exemplos ado.net\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.pdb
+E:\work\si2\SI2_2021_SV\recursos\Exemplos ado.net\AP2_UserExample\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.csprojAssemblyReference.cache
+E:\work\si2\SI2_2021_SV\recursos\Exemplos ado.net\AP2_UserExample\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.exe
+E:\work\si2\SI2_2021_SV\recursos\Exemplos ado.net\AP2_UserExample\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.exe.config
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.exe
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\BusinessLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\DataLayer.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\Model.dll
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\BusinessLayer.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\DataLayer.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\bin\Debug\Model.pdb
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.csprojAssemblyReference.cache
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.csproj.CopyComplete
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.exe
+E:\work\si2\SI2_2021_SV\AulasPraticas\AP3\AP2_UserExample\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.pdb
