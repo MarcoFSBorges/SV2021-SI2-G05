@@ -16,7 +16,7 @@ namespace AP2_UserExample
         static void Main(string[] args)
         {
 
-            testGetAllPlayer();
+            //testGetAllPlayer();
 
             //testCreatePlayer();
 
@@ -24,7 +24,7 @@ namespace AP2_UserExample
 
             //testUpdatePlayer();
 
-            //testPlayerView();
+            testPlayerView();
 
             //testDeletePlayer();
 
@@ -55,7 +55,7 @@ namespace AP2_UserExample
             PlayerService playerService = new PlayerService(getSolutionType());
 
             Player p = new Player();
-            p.Username = "DummyFather";
+            p.Username = "DummyFather1";
 
             playerService.createPlayer(p);
         }

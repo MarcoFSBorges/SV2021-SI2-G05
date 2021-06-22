@@ -39,3 +39,17 @@ C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\Ma
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\DataLayer.pdb
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\Model.pdb
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\ConsolePresentationLayer.csproj.CopyComplete
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.exe.config
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.exe
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\BusinessLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\DataLayer.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\BusinessLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\DataLayer.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\ConsolePresentationLayer.csprojAssemblyReference.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\ConsolePresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\ConsolePresentationLayer.csproj.CopyComplete
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.exe
+C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.pdb

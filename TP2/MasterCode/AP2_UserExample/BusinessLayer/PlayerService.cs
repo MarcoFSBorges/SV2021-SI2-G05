@@ -34,6 +34,10 @@ namespace BusinessLayer
                 {
                     throw e;
                 }
+                finally
+                {
+                    scope.Dispose();
+                }
             }
             return allPlayers;
         }
@@ -51,6 +55,10 @@ namespace BusinessLayer
                 catch (Exception e)
                 {
                     throw e;
+                }
+                finally
+                {
+                    scope.Dispose();
                 }
             }
             return createdPlayer;
@@ -71,6 +79,10 @@ namespace BusinessLayer
                 catch (Exception e)
                 {
                     throw e;
+                }
+                finally
+                {
+                    scope.Dispose();
                 }
                 return newLogin;
             }
