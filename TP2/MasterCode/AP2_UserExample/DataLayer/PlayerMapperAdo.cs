@@ -43,8 +43,8 @@ namespace DataLayer
             using (SqlCommand cmd = context.con.CreateCommand())
             {
                 cmd.Transaction = context.tran;
+                cmd.CommandText = "createPlayerWithOptions";
                 cmd.CommandType = CommandType.StoredProcedure;
-                //CREATE OR ALTER PROCEDURE createPlayerWithOptions @player_id int, @login_id int, @life_points int, @strength_points int, @speed_points int, @item_id int, @clan_id int
 
                 SqlParameter playerIDParameter = new SqlParameter("@player_id", player.PlayerID);
                 cmd.Parameters.Add(playerIDParameter);

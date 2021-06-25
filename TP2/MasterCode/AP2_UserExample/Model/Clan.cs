@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Class1
+    public class Clan
     {
+        public int ClanID { get; set; }
+        public string ClanName { get; set; }
+        public int ClanScore { get; set; }
     }
 }

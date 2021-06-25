@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Class1
+    public class UnregisteredPlayer
     {
+        public int PlayerID { get; set; }
+        public int Name { get; set; }
     }
 }

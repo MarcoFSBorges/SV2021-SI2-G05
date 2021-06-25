@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clan.cs" />
+    <Compile Include="UnregisteredPlayer.cs" />
+    <Compile Include="RegisteredPLayer.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
