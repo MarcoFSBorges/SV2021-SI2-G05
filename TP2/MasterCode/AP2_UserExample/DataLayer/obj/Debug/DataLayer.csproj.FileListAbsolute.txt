@@ -33,3 +33,12 @@ C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\M
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\Model.dll
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\Model.pdb
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.pdb

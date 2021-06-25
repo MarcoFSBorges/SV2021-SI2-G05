@@ -3,11 +3,6 @@ using DataLayer;
 using Model;
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AP2_UserExample
 {
@@ -15,33 +10,83 @@ namespace AP2_UserExample
     {
         static void Main(string[] args)
         {
+            PlayerService playerService = new PlayerService(getSolutionType());
 
-            //testGetAllPlayer();
+            run(playerService);
 
-            //testCreatePlayer();
-
-            //testGetAllPlayer();
-
-            //testUpdatePlayer();
-
-            testPlayerView();
-
-            //testDeletePlayer();
-
-            Console.WriteLine("Fim...");
-            Console.ReadKey();
+            //testPlayerView(playerService);
         }
 
         private static SolutionType getSolutionType()
         {
-            Console.WriteLine("Escolha a Solução (ADO, EF):");
-            String line = Console.ReadLine();
-           return (SolutionType) Enum.Parse(typeof(SolutionType),line);
+            SolutionType res = new SolutionType();
+            Console.WriteLine("Escolha a Solução:\n1\tADO\n2\tEF\nAny key\tExit");
+            ConsoleKeyInfo keyPressed = Console.ReadKey();
+
+            if (keyPressed.KeyChar == '1')
+            {
+                res = SolutionType.ADO;
+            } else if (keyPressed.KeyChar == '2')
+            {
+                res = SolutionType.EF;
+            } else
+            {
+                Environment.Exit(0);
+            }
+            return res;
         }
 
-        private static void testGetAllPlayer()
+        private static void run(PlayerService playerService)
         {
-            PlayerService playerService = new PlayerService(getSolutionType());
+            bool exit = false;
+            while(!exit)
+            {
+                Console.Clear();
+                PrintOptions();
+                ConsoleKeyInfo keyPressed = Console.ReadKey();
+                Console.Clear();
+                switch (keyPressed.KeyChar)
+                {
+                    case '0':
+                        exit = true;
+                        break;
+                    case '1':
+                        testGetAllPlayer(playerService);
+                        break;
+                    case '2':
+                        testCreatePlayer(playerService);
+                        break;
+                    case '3':
+                        testUpdatePlayer(playerService);
+                        break;
+                    case '4':
+                        testDeletePlayer(playerService);
+                        break;
+                }
+                Console.WriteLine("\nPress Enter to continue. Esc to exit.");
+                while(keyPressed.Key != ConsoleKey.Enter && !exit)
+                {
+                    keyPressed = Console.ReadKey();
+                    if (keyPressed.Key == ConsoleKey.Escape)
+                    {
+                        exit = true;
+                    }
+                }
+            }
+        }
+
+        private static void PrintOptions()
+        {
+            Console.WriteLine("Available operations:");
+            Console.WriteLine("1\tGet all players");
+            Console.WriteLine("2\tCreate new player");
+            Console.WriteLine("3\tUpdate existing player");
+            Console.WriteLine("4\tDelete existing player");
+            Console.WriteLine("0\tExit");
+        }
+
+        private static void testGetAllPlayer(PlayerService playerService)
+        {
             IList<Player> allUsers = playerService.readAll();
 
             foreach (Player p in allUsers)
@@ -50,9 +95,8 @@ namespace AP2_UserExample
             }
         }
 
-        private static void testCreatePlayer()
+        private static void testCreatePlayer(PlayerService playerService)
         {
-            PlayerService playerService = new PlayerService(getSolutionType());
 
             Player p = new Player();
             p.Username = "DummyFather1";
@@ -60,9 +104,8 @@ namespace AP2_UserExample
             playerService.createPlayer(p);
         }
 
-        private static void testUpdatePlayer()
+        private static void testUpdatePlayer(PlayerService playerService)
         {
-            PlayerService playerService = new PlayerService(getSolutionType());
 
             Player p = new Player();
             p.Username = "testerDummy1";
@@ -76,15 +119,13 @@ namespace AP2_UserExample
             playerService.UpdatePlayer(l);
         }
 
-        private static void testPlayerView()
+        private static void testPlayerView(PlayerService playerService)
         {
-            PlayerService playerService = new PlayerService(getSolutionType());
             playerService.PlayerView();
         }
 
-        private static void testDeletePlayer()
+        private static void testDeletePlayer(PlayerService playerService)
         {
-            PlayerService playerService = new PlayerService(getSolutionType());
 
             Player p = new Player();
             p.Username = "DummyFather";
