@@ -22,4 +22,3 @@ IF (@clan_id IS NOT NULL)
 	END CATCH
 
 
-

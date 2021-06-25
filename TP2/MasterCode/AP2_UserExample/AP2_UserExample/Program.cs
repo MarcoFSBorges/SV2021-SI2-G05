@@ -57,7 +57,7 @@ namespace AP2_UserExample
             Player p = new Player();
             p.Username = "DummyFather1";
 
-            playerService.createPlayer(p);
+            playerService.CreatePlayer(p);
         }
 
         private static void testUpdatePlayer()

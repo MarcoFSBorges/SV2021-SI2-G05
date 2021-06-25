@@ -22,7 +22,7 @@ namespace UnitTestProject
                 Username = generatedUsername,
             };
 
-            user = userService.createPlayer(user);
+            user = userService.CreatePlayer(user);
 
             Assert.IsNotNull(user, "user must exist");
             Assert.AreEqual(generatedUsername, user.Username);

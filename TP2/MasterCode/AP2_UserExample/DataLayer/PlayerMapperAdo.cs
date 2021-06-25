@@ -36,6 +36,45 @@ namespace DataLayer
             return player;
         }
 
+        public RegisteredPLayer CreateWithOptions(RegisteredPLayer player, Item item, Clan clan)
+        {
+            ensureContext();
+
+            using (SqlCommand cmd = context.con.CreateCommand())
+            {
+                cmd.Transaction = context.tran;
+                cmd.CommandType = CommandType.StoredProcedure;
+                //CREATE OR ALTER PROCEDURE createPlayerWithOptions @player_id int, @login_id int, @life_points int, @strength_points int, @speed_points int, @item_id int, @clan_id int
+
+                SqlParameter playerIDParameter = new SqlParameter("@player_id", player.PlayerID);
+                cmd.Parameters.Add(playerIDParameter);
+
+                SqlParameter loginIDParameter = new SqlParameter("@login_id", player.LoginID);
+                cmd.Parameters.Add(loginIDParameter);
+
+                SqlParameter lifePointsParameter = new SqlParameter("@life_points", player.LifePoints);
+                cmd.Parameters.Add(lifePointsParameter);
+
+                SqlParameter strengthPointsParameter = new SqlParameter("@strength_points", player.StrengthPoints);
+                cmd.Parameters.Add(strengthPointsParameter);
+
+                SqlParameter speedPointsParameter = new SqlParameter("@speed_points", player.SpeedPoints);
+                cmd.Parameters.Add(speedPointsParameter);
+
+                SqlParameter itemIDParameter = new SqlParameter("@item_id", item.ItemID);
+                cmd.Parameters.Add(itemIDParameter);
+
+                SqlParameter clanIDParameter = new SqlParameter("@clan_id", clan.ClanID);
+                cmd.Parameters.Add(clanIDParameter);
+
+                int updated = cmd.ExecuteNonQuery();
+                context.commit();
+
+                Console.WriteLine("created {0} registry.", updated);
+            }
+            return player;
+        }
+
         public Player Delete(Player player)
         {
             ensureContext();

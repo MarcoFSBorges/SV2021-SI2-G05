@@ -41,7 +41,7 @@ namespace BusinessLayer
             }
             return allPlayers;
         }
-        public Player createPlayer(Player player)
+        public Player CreatePlayer(Player player)
         {
             IPlayerMapper aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);
             Player createdPlayer = null;
