@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SI2_SVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="f_getClanInfo_Result">
+    <Property Name="clan_id" Type="Int32" />
+    <Property Name="clan_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="clan_score" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="f_getPlayerGamesFromYear_Result">
+    <Property Name="match_id" Type="Int32" Nullable="false" />
+    <Property Name="state_id" Type="Int32" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="player_one" Type="Int32" Nullable="false" />
+    <Property Name="player_two" Type="Int32" />
+    <Property Name="start_time" Type="DateTime" />
+    <Property Name="winner" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="CLAN">
+    <Key>
+      <PropertyRef Name="clan_id" />
+    </Key>
+    <Property Name="clan_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clan_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clan_score" Type="Int32" />
+    <NavigationProperty Name="REGISTEREDPLAYER" Relationship="Self.FK__REGISTERED__clan__10566F31" FromRole="CLAN" ToRole="REGISTEREDPLAYER" />
+  </EntityType>
+  <EntityType Name="ITEM">
+    <Key>
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="player_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="active" Type="Boolean" />
+    <Property Name="bonus_life" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="bonus_strength" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="bonus_speed" Type="Decimal" Precision="4" Scale="2" />
+    <NavigationProperty Name="PLAYER" Relationship="Self.FK__ITEM__player_id__30C33EC3" FromRole="ITEM" ToRole="PLAYER" />
+  </EntityType>
+  <EntityType Name="LOGIN">
+    <Key>
+      <PropertyRef Name="login_id" />
+    </Key>
+    <Property Name="login_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="birthday" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="REGISTEREDPLAYER" Relationship="Self.FK__REGISTERE__login__114A936A" FromRole="LOGIN" ToRole="REGISTEREDPLAYER" />
+  </EntityType>
+  <EntityType Name="MATCH">
+    <Key>
+      <PropertyRef Name="match_id" />
+    </Key>
+    <Property Name="match_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="state_id" Type="Int32" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="player_one" Type="Int32" Nullable="false" />
+    <Property Name="player_two" Type="Int32" />
+    <Property Name="start_time" Type="DateTime" Precision="0" />
+    <Property Name="winner" Type="Int32" />
+    <NavigationProperty Name="PLAYER" Relationship="Self.FK__MATCH__player_on__2645B050" FromRole="MATCH" ToRole="PLAYER" />
+    <NavigationProperty Name="PLAYER1" Relationship="Self.FK__MATCH__player_tw__2739D489" FromRole="MATCH" ToRole="PLAYER" />
+    <NavigationProperty Name="STATE" Relationship="Self.FK__MATCH__state_id__245D67DE" FromRole="MATCH" ToRole="STATE" />
+    <NavigationProperty Name="TYPE" Relationship="Self.FK__MATCH__type_id__25518C17" FromRole="MATCH" ToRole="TYPE" />
+    <NavigationProperty Name="PLAYER2" Relationship="Self.FK__MATCH__winner__282DF8C2" FromRole="MATCH" ToRole="PLAYER" />
+  </EntityType>
+  <EntityType Name="NONREGISTEREDPLAYER">
+    <Key>
+      <PropertyRef Name="player_id" />
+    </Key>
+    <Property Name="player_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PLAYER" Relationship="Self.FK__NONREGIST__playe__17F790F9" FromRole="NONREGISTEREDPLAYER" ToRole="PLAYER" />
+  </EntityType>
+  <EntityType Name="PLAYER">
+    <Key>
+      <PropertyRef Name="player_id" />
+    </Key>
+    <Property Name="player_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="deleted" Type="Boolean" />
+    <NavigationProperty Name="ITEM" Relationship="Self.FK__ITEM__player_id__30C33EC3" FromRole="PLAYER" ToRole="ITEM" />
+    <NavigationProperty Name="MATCH" Relationship="Self.FK__MATCH__player_on__2645B050" FromRole="PLAYER" ToRole="MATCH" />
+    <NavigationProperty Name="MATCH1" Relationship="Self.FK__MATCH__player_tw__2739D489" FromRole="PLAYER" ToRole="MATCH" />
+    <NavigationProperty Name="MATCH2" Relationship="Self.FK__MATCH__winner__282DF8C2" FromRole="PLAYER" ToRole="MATCH" />
+    <NavigationProperty Name="NONREGISTEREDPLAYER" Relationship="Self.FK__NONREGIST__playe__17F790F9" FromRole="PLAYER" ToRole="NONREGISTEREDPLAYER" />
+    <NavigationProperty Name="REGISTEREDPLAYER" Relationship="Self.FK__REGISTERE__playe__0F624AF8" FromRole="PLAYER" ToRole="REGISTEREDPLAYER" />
+  </EntityType>
+  <EntityType Name="REGISTEREDPLAYER">
+    <Key>
+      <PropertyRef Name="player_id" />
+    </Key>
+    <Property Name="player_id" Type="Int32" Nullable="false" />
+    <Property Name="login_id" Type="Int32" />
+    <Property Name="score" Type="Int32" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="bank_balance" Type="Int32" />
+    <Property Name="life_points" Type="Int32" Nullable="false" />
+    <Property Name="strength_points" Type="Int32" Nullable="false" />
+    <Property Name="speed_points" Type="Int32" Nullable="false" />
+    <Property Name="clan" Type="Int32" />
+    <NavigationProperty Name="CLAN1" Relationship="Self.FK__REGISTERED__clan__10566F31" FromRole="REGISTEREDPLAYER" ToRole="CLAN" />
+    <NavigationProperty Name="LOGIN" Relationship="Self.FK__REGISTERE__login__114A936A" FromRole="REGISTEREDPLAYER" ToRole="LOGIN" />
+    <NavigationProperty Name="PLAYER" Relationship="Self.FK__REGISTERE__playe__0F624AF8" FromRole="REGISTEREDPLAYER" ToRole="PLAYER" />
+  </EntityType>
+  <EntityType Name="STATE">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="Int32" Nullable="false" />
+    <Property Name="state1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="MATCH" Relationship="Self.FK__MATCH__state_id__245D67DE" FromRole="STATE" ToRole="MATCH" />
+  </EntityType>
+  <EntityType Name="TYPE">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="min_life_points" Type="Int32" />
+    <Property Name="min_strength_points" Type="Int32" />
+    <Property Name="min_speed_points" Type="Int32" />
+    <Property Name="score" Type="Int32" />
+    <NavigationProperty Name="MATCH" Relationship="Self.FK__MATCH__type_id__25518C17" FromRole="TYPE" ToRole="MATCH" />
+  </EntityType>
+  <EntityType Name="GLOBAL_CONFIGURATION">
+    <Key>
+      <PropertyRef Name="config_id" />
+      <PropertyRef Name="max_level" />
+      <PropertyRef Name="clan_members" />
+      <PropertyRef Name="limit" />
+    </Key>
+    <Property Name="config_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="max_level" Type="Int32" Nullable="false" />
+    <Property Name="clan_members" Type="Int32" Nullable="false" />
+    <Property Name="limit" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="players_view">
+    <Key>
+      <PropertyRef Name="player_id" />
+    </Key>
+    <Property Name="player_id" Type="Int32" Nullable="false" />
+    <Property Name="login_id" Type="Int32" />
+    <Property Name="score" Type="Int32" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="bank_balance" Type="Int32" />
+    <Property Name="life_points" Type="Int32" />
+    <Property Name="strength_points" Type="Int32" />
+    <Property Name="speed_points" Type="Int32" />
+    <Property Name="clan_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="item_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__REGISTERED__clan__10566F31">
+    <End Role="CLAN" Type="Self.CLAN" Multiplicity="0..1" />
+    <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLAN">
+        <PropertyRef Name="clan_id" />
+      </Principal>
+      <Dependent Role="REGISTEREDPLAYER">
+        <PropertyRef Name="clan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ITEM__player_id__30C33EC3">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="ITEM" Type="Self.ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="ITEM">
+        <PropertyRef Name="player_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__REGISTERE__login__114A936A">
+    <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+    <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOGIN">
+        <PropertyRef Name="login_id" />
+      </Principal>
+      <Dependent Role="REGISTEREDPLAYER">
+        <PropertyRef Name="login_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__player_on__2645B050">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="player_one" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__player_tw__2739D489">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="player_two" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__state_id__245D67DE">
+    <End Role="STATE" Type="Self.STATE" Multiplicity="0..1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STATE">
+        <PropertyRef Name="state_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="state_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__type_id__25518C17">
+    <End Role="TYPE" Type="Self.TYPE" Multiplicity="0..1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TYPE">
+        <PropertyRef Name="type_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__winner__282DF8C2">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="winner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NONREGIST__playe__17F790F9">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
+    <End Role="NONREGISTEREDPLAYER" Type="Self.NONREGISTEREDPLAYER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="NONREGISTEREDPLAYER">
+        <PropertyRef Name="player_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__REGISTERE__playe__0F624AF8">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
+    <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="REGISTEREDPLAYER">
+        <PropertyRef Name="player_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Jogos_entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CLAN" EntityType="Self.CLAN" />
+    <EntitySet Name="ITEM" EntityType="Self.ITEM" />
+    <EntitySet Name="LOGIN" EntityType="Self.LOGIN" />
+    <EntitySet Name="MATCH" EntityType="Self.MATCH" />
+    <EntitySet Name="NONREGISTEREDPLAYER" EntityType="Self.NONREGISTEREDPLAYER" />
+    <EntitySet Name="PLAYER" EntityType="Self.PLAYER" />
+    <EntitySet Name="REGISTEREDPLAYER" EntityType="Self.REGISTEREDPLAYER" />
+    <EntitySet Name="STATE" EntityType="Self.STATE" />
+    <EntitySet Name="TYPE" EntityType="Self.TYPE" />
+    <EntitySet Name="GLOBAL_CONFIGURATION" EntityType="Self.GLOBAL_CONFIGURATION" />
+    <EntitySet Name="players_view" EntityType="Self.players_view" />
+    <AssociationSet Name="FK__REGISTERED__clan__10566F31" Association="Self.FK__REGISTERED__clan__10566F31">
+      <End Role="CLAN" EntitySet="CLAN" />
+      <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ITEM__player_id__30C33EC3" Association="Self.FK__ITEM__player_id__30C33EC3">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="ITEM" EntitySet="ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__REGISTERE__login__114A936A" Association="Self.FK__REGISTERE__login__114A936A">
+      <End Role="LOGIN" EntitySet="LOGIN" />
+      <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__player_on__2645B050" Association="Self.FK__MATCH__player_on__2645B050">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__player_tw__2739D489" Association="Self.FK__MATCH__player_tw__2739D489">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__state_id__245D67DE" Association="Self.FK__MATCH__state_id__245D67DE">
+      <End Role="STATE" EntitySet="STATE" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__type_id__25518C17" Association="Self.FK__MATCH__type_id__25518C17">
+      <End Role="TYPE" EntitySet="TYPE" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__winner__282DF8C2" Association="Self.FK__MATCH__winner__282DF8C2">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NONREGIST__playe__17F790F9" Association="Self.FK__NONREGIST__playe__17F790F9">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="NONREGISTEREDPLAYER" EntitySet="NONREGISTEREDPLAYER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__REGISTERE__playe__0F624AF8" Association="Self.FK__REGISTERE__playe__0F624AF8">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
+    </AssociationSet>
+    <FunctionImport Name="f_getClanInfo" IsComposable="true" ReturnType="Collection(SI2_SVModel.f_getClanInfo_Result)">
+      <Parameter Name="clanName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="f_getPlayerGamesFromYear" IsComposable="true" ReturnType="Collection(SI2_SVModel.f_getPlayerGamesFromYear_Result)">
+      <Parameter Name="player_id" Mode="In" Type="Int32" />
+      <Parameter Name="year" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="createPlayerWithOptions">
+      <Parameter Name="player_id" Mode="In" Type="Int32" />
+      <Parameter Name="login_id" Mode="In" Type="Int32" />
+      <Parameter Name="life_points" Mode="In" Type="Int32" />
+      <Parameter Name="strength_points" Mode="In" Type="Int32" />
+      <Parameter Name="speed_points" Mode="In" Type="Int32" />
+      <Parameter Name="item_id" Mode="In" Type="Int32" />
+      <Parameter Name="clan_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="p_createMatch">
+      <Parameter Name="player_one" Mode="In" Type="Int32" />
+      <Parameter Name="player_two" Mode="In" Type="Int32" />
+      <Parameter Name="description" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="p_giveItemToPlayer">
+      <Parameter Name="player_id" Mode="In" Type="Int32" />
+      <Parameter Name="item_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

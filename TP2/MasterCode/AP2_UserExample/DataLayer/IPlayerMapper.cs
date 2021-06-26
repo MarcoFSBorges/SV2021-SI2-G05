@@ -13,5 +13,7 @@ namespace DataLayer
 
         void GetPlayerView();
         IList<Clan> GetClansOrClan(string clanName);
+
+        void Dispose();
     }
 }

@@ -9,10 +9,25 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public class RegisteredPlayerMapperAdo : AbstractMapper<RegisteredPlayer, int?, List<RegisteredPlayer>>, IRegisteredPlayerMapper
+    public class RegisteredPlayerMapperAdo : IRegisteredPlayerMapper
     {
-        public RegisteredPlayerMapperAdo(Context ctx) : base(ctx)
+        public readonly Context context;
+        public RegisteredPlayerMapperAdo(Context ctx)
         {
+            context = ctx;
+        }
+
+        public void EnsureContext()
+        {
+            if (context == null)
+            {
+                throw new Exception("A contexto não foi bem inicializada...");
+            }
+        }
+
+        public void Dispose()
+        {
+            context.Dispose();
         }
 
         public RegisteredPlayer CreateWithOptions(RegisteredPlayer player, Item item, Clan clan)
@@ -52,6 +67,31 @@ namespace DataLayer
                 Console.WriteLine("created {0} registry.", updated);
             }
             return player;
+        }
+
+        public RegisteredPlayer Create(RegisteredPlayer entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public RegisteredPlayer Update(RegisteredPlayer entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public RegisteredPlayer Delete(RegisteredPlayer entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public RegisteredPlayer Read(int? id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<RegisteredPlayer> ReadAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }

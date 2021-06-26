@@ -14,7 +14,7 @@ namespace AP2_UserExample
 
             Run(playerService);
 
-            //testPlayerView(playerService);
+            //TestPlayerView(playerService);
         }
 
         private static SolutionType GetSolutionType()

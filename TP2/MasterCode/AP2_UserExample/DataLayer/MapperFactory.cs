@@ -8,14 +8,15 @@ namespace DataLayer
 {
     public class MapperFactory
     {
-        public static IPlayerMapper CreatePlayerMapper(SolutionType theSolutionType) { 
-            if(theSolutionType.Equals(SolutionType.ADO))
+        public static IPlayerMapper createPlayerMapper(SolutionType theSolutionType)
+        {
+            Context ctx = new Context();
+            if (theSolutionType.Equals(SolutionType.ADO))
             {
-                Context ctx = new Context();
                 return new PlayerMapperAdo(ctx);
-            } else if (theSolutionType.Equals(SolutionType.EF))
+            }
+            else if (theSolutionType.Equals(SolutionType.EF))
             {
-                Context ctx = new Context();
                 return new PlayerMapperEf(ctx);
             }
             throw new Exception("Apenas as implementações ADO.NET e EF são possíveis.");
@@ -23,15 +24,14 @@ namespace DataLayer
 
         public static IRegisteredPlayerMapper CreateRegisteredPlayerMapper(SolutionType theSolutionType)
         {
+            Context ctx = new Context();
             if (theSolutionType.Equals(SolutionType.ADO))
             {
-                Context ctx = new Context();
                 PlayerMapperAdo playerMapperAdo = new PlayerMapperAdo(ctx);
                 return (IRegisteredPlayerMapper)playerMapperAdo;
             }
             else if (theSolutionType.Equals(SolutionType.EF))
             {
-                Context ctx = new Context();
                 PlayerMapperEf playerMapperEf = new PlayerMapperEf(ctx);
                 return (IRegisteredPlayerMapper)playerMapperEf;
             }

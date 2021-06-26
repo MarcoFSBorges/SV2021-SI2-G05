@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SI2_SVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLAN">
+    <Key>
+      <PropertyRef Name="clan_id" />
+    </Key>
+    <Property Name="clan_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clan_name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="clan_score" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SI2_SV.dbo.GLOBAL_CONFIGURATION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GLOBAL_CONFIGURATION">
+    <Key>
+      <PropertyRef Name="config_id" />
+      <PropertyRef Name="max_level" />
+      <PropertyRef Name="clan_members" />
+      <PropertyRef Name="limit" />
+    </Key>
+    <Property Name="config_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="max_level" Type="int" Nullable="false" />
+    <Property Name="clan_members" Type="int" Nullable="false" />
+    <Property Name="limit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ITEM">
+    <Key>
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="item_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="player_id" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="active" Type="bit" />
+    <Property Name="bonus_life" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="bonus_strength" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="bonus_speed" Type="decimal" Precision="4" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SI2_SV.dbo.ITEM_PRICE' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ITEM_PRICE">
+          <Property Name="item_id" Type="int" />
+          <Property Name="price" Type="decimal" Precision="20" Scale="3" />
+        </EntityType>-->
+  <EntityType Name="LOGIN">
+    <Key>
+      <PropertyRef Name="login_id" />
+    </Key>
+    <Property Name="login_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="birthday" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MATCH">
+    <Key>
+      <PropertyRef Name="match_id" />
+    </Key>
+    <Property Name="match_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="state_id" Type="int" />
+    <Property Name="type_id" Type="int" />
+    <Property Name="player_one" Type="int" Nullable="false" />
+    <Property Name="player_two" Type="int" />
+    <Property Name="start_time" Type="date" />
+    <Property Name="winner" Type="int" />
+  </EntityType>
+  <EntityType Name="NONREGISTEREDPLAYER">
+    <Key>
+      <PropertyRef Name="player_id" />
+    </Key>
+    <Property Name="player_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PLAYER">
+    <Key>
+      <PropertyRef Name="player_id" />
+    </Key>
+    <Property Name="player_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="REGISTEREDPLAYER">
+    <Key>
+      <PropertyRef Name="player_id" />
+    </Key>
+    <Property Name="player_id" Type="int" Nullable="false" />
+    <Property Name="login_id" Type="int" />
+    <Property Name="score" Type="int" />
+    <Property Name="level" Type="int" />
+    <Property Name="bank_balance" Type="int" />
+    <Property Name="life_points" Type="int" Nullable="false" />
+    <Property Name="strength_points" Type="int" Nullable="false" />
+    <Property Name="speed_points" Type="int" Nullable="false" />
+    <Property Name="clan" Type="int" />
+  </EntityType>
+  <EntityType Name="STATE">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="int" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TYPE">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="int" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="min_life_points" Type="int" />
+    <Property Name="min_strength_points" Type="int" />
+    <Property Name="min_speed_points" Type="int" />
+    <Property Name="score" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SI2_SV.dbo.players_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="players_view">
+    <Key>
+      <PropertyRef Name="player_id" />
+    </Key>
+    <Property Name="player_id" Type="int" Nullable="false" />
+    <Property Name="login_id" Type="int" />
+    <Property Name="score" Type="int" />
+    <Property Name="level" Type="int" />
+    <Property Name="bank_balance" Type="int" />
+    <Property Name="life_points" Type="int" />
+    <Property Name="strength_points" Type="int" />
+    <Property Name="speed_points" Type="int" />
+    <Property Name="clan_name" Type="varchar" MaxLength="20" />
+    <Property Name="item_id" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__ITEM__player_id__30C33EC3">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="ITEM" Type="Self.ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="ITEM">
+        <PropertyRef Name="player_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'SI2_SV.dbo.ITEM_PRICE' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__ITEM_PRIC__item___339FAB6E" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__LOGIN__username__02FC7413" />-->
+  <Association Name="FK__MATCH__player_on__2645B050">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="player_one" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__player_tw__2739D489">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="player_two" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__state_id__245D67DE">
+    <End Role="STATE" Type="Self.STATE" Multiplicity="0..1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STATE">
+        <PropertyRef Name="state_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="state_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__type_id__25518C17">
+    <End Role="TYPE" Type="Self.TYPE" Multiplicity="0..1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TYPE">
+        <PropertyRef Name="type_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATCH__winner__282DF8C2">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="MATCH">
+        <PropertyRef Name="winner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NONREGIST__playe__17F790F9">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
+    <End Role="NONREGISTEREDPLAYER" Type="Self.NONREGISTEREDPLAYER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="NONREGISTEREDPLAYER">
+        <PropertyRef Name="player_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__REGISTERE__login__114A936A">
+    <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+    <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOGIN">
+        <PropertyRef Name="login_id" />
+      </Principal>
+      <Dependent Role="REGISTEREDPLAYER">
+        <PropertyRef Name="login_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__REGISTERE__playe__0F624AF8">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
+    <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="player_id" />
+      </Principal>
+      <Dependent Role="REGISTEREDPLAYER">
+        <PropertyRef Name="player_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__REGISTERED__clan__10566F31">
+    <End Role="CLAN" Type="Self.CLAN" Multiplicity="0..1" />
+    <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLAN">
+        <PropertyRef Name="clan_id" />
+      </Principal>
+      <Dependent Role="REGISTEREDPLAYER">
+        <PropertyRef Name="clan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Check_att" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="att" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CheckMaxLevel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="level" Type="int" Mode="In" />
+    <Parameter Name="life_points" Type="int" Mode="In" />
+    <Parameter Name="strength_points" Type="int" Mode="In" />
+    <Parameter Name="speed_points" Type="int" Mode="In" />
+  </Function>
+  <Function Name="createPlayerWithOptions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="player_id" Type="int" Mode="In" />
+    <Parameter Name="login_id" Type="int" Mode="In" />
+    <Parameter Name="life_points" Type="int" Mode="In" />
+    <Parameter Name="strength_points" Type="int" Mode="In" />
+    <Parameter Name="speed_points" Type="int" Mode="In" />
+    <Parameter Name="item_id" Type="int" Mode="In" />
+    <Parameter Name="clan_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="f_checkLevels" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="player_one" Type="int" Mode="In" />
+    <Parameter Name="player_two" Type="int" Mode="In" />
+    <Parameter Name="type_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="f_getClanInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clanName" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="clan_id" Type="int" />
+          <Property Name="clan_name" Type="varchar" MaxLength="20" />
+          <Property Name="clan_score" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="f_getPlayerGamesFromYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="player_id" Type="int" Mode="In" />
+    <Parameter Name="year" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="match_id" Type="int" Nullable="false" />
+          <Property Name="state_id" Type="int" />
+          <Property Name="type_id" Type="int" />
+          <Property Name="player_one" Type="int" Nullable="false" />
+          <Property Name="player_two" Type="int" />
+          <Property Name="start_time" Type="date" />
+          <Property Name="winner" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="f_getPlayerLevel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="player_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="p_createMatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="player_one" Type="int" Mode="In" />
+    <Parameter Name="player_two" Type="int" Mode="In" />
+    <Parameter Name="description" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="p_giveItemToPlayer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="player_id" Type="int" Mode="In" />
+    <Parameter Name="item_id" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="SI2_SVModelStoreContainer">
+    <EntitySet Name="CLAN" EntityType="Self.CLAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITEM" EntityType="Self.ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOGIN" EntityType="Self.LOGIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MATCH" EntityType="Self.MATCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NONREGISTEREDPLAYER" EntityType="Self.NONREGISTEREDPLAYER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PLAYER" EntityType="Self.PLAYER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REGISTEREDPLAYER" EntityType="Self.REGISTEREDPLAYER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STATE" EntityType="Self.STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TYPE" EntityType="Self.TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GLOBAL_CONFIGURATION" EntityType="Self.GLOBAL_CONFIGURATION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GLOBAL_CONFIGURATION].[config_id] AS [config_id], 
+    [GLOBAL_CONFIGURATION].[max_level] AS [max_level], 
+    [GLOBAL_CONFIGURATION].[clan_members] AS [clan_members], 
+    [GLOBAL_CONFIGURATION].[limit] AS [limit]
+    FROM [dbo].[GLOBAL_CONFIGURATION] AS [GLOBAL_CONFIGURATION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="players_view" EntityType="Self.players_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [players_view].[player_id] AS [player_id], 
+    [players_view].[login_id] AS [login_id], 
+    [players_view].[score] AS [score], 
+    [players_view].[level] AS [level], 
+    [players_view].[bank_balance] AS [bank_balance], 
+    [players_view].[life_points] AS [life_points], 
+    [players_view].[strength_points] AS [strength_points], 
+    [players_view].[speed_points] AS [speed_points], 
+    [players_view].[clan_name] AS [clan_name], 
+    [players_view].[item_id] AS [item_id], 
+    [players_view].[name] AS [name]
+    FROM [dbo].[players_view] AS [players_view]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__ITEM__player_id__30C33EC3" Association="Self.FK__ITEM__player_id__30C33EC3">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="ITEM" EntitySet="ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__player_on__2645B050" Association="Self.FK__MATCH__player_on__2645B050">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__player_tw__2739D489" Association="Self.FK__MATCH__player_tw__2739D489">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__state_id__245D67DE" Association="Self.FK__MATCH__state_id__245D67DE">
+      <End Role="STATE" EntitySet="STATE" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__type_id__25518C17" Association="Self.FK__MATCH__type_id__25518C17">
+      <End Role="TYPE" EntitySet="TYPE" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATCH__winner__282DF8C2" Association="Self.FK__MATCH__winner__282DF8C2">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="MATCH" EntitySet="MATCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NONREGIST__playe__17F790F9" Association="Self.FK__NONREGIST__playe__17F790F9">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="NONREGISTEREDPLAYER" EntitySet="NONREGISTEREDPLAYER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__REGISTERE__login__114A936A" Association="Self.FK__REGISTERE__login__114A936A">
+      <End Role="LOGIN" EntitySet="LOGIN" />
+      <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__REGISTERE__playe__0F624AF8" Association="Self.FK__REGISTERE__playe__0F624AF8">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__REGISTERED__clan__10566F31" Association="Self.FK__REGISTERED__clan__10566F31">
+      <End Role="CLAN" EntitySet="CLAN" />
+      <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -6,13 +6,28 @@ using System.Data.SqlClient;
 
 namespace DataLayer
 {
-    public class PlayerMapperAdo : AbstractMapper<Player, int?, List<Player>>, IPlayerMapper
+     public class PlayerMapperAdo : IPlayerMapper
     {
-        public PlayerMapperAdo(Context ctx) : base(ctx)
-        { 
+        public readonly Context context;
+        public PlayerMapperAdo(Context ctx) 
+        {
+            context = ctx;
         }
 
-        public new Player Create(Player player)
+        public void EnsureContext()
+        {
+            if (context == null)
+            {
+                throw new Exception("A contexto não foi bem inicializada...");
+            }
+        }
+
+        public void Dispose()
+        {
+            context.Dispose();
+        }
+
+        public Player Create(Player player)
         {
             EnsureContext();
 
@@ -115,7 +130,7 @@ namespace DataLayer
             return result;
         }*/
 
-        public new Player Delete(Player player)
+        public Player Delete(Player player)
         {
             EnsureContext();
 
@@ -159,12 +174,12 @@ namespace DataLayer
             }
         }
 
-        public new Player Read(int? id)
+        public Player Read(int? id)
         {
             throw new NotImplementedException();
         }
 
-        public new List<Player> ReadAll()
+        public List<Player> ReadAll()
         {
             EnsureContext();
             List<Player> players = new List<Player>();
@@ -279,6 +294,11 @@ namespace DataLayer
                 }
             }
             return result;
+        }
+
+        public Player Update(Player entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

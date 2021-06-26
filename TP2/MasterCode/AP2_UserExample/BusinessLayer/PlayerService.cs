@@ -12,15 +12,21 @@ namespace BusinessLayer
     public class PlayerService
     {
         protected SolutionType aSolutionType;
+        protected IPlayerMapper aPlayerMapper;
 
         public PlayerService(SolutionType aSolutionType)
         {
             this.aSolutionType = aSolutionType;
+            aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);
+        }
+
+        public void closeConnection()
+        {
+            aPlayerMapper.Dispose();
         }
 
         public IList<Player> ReadAll()
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             IList<Player> allPlayers = null;
             using (TransactionScope scope = new TransactionScope())
             {
@@ -43,7 +49,6 @@ namespace BusinessLayer
 
         public IList<Clan> GetClansOrClan(string clanName)
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             IList<Clan> clans = null;
             using (TransactionScope scope = new TransactionScope())
             {
@@ -66,7 +71,6 @@ namespace BusinessLayer
 
         public Player CreatePlayer(Player player)
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             Player createdPlayer = null;
             using (TransactionScope scope = new TransactionScope())
             {
@@ -89,7 +93,6 @@ namespace BusinessLayer
 
         public Login UpdatePlayer(Login login)
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             Login newLogin = null;
             using (TransactionScope scope = new TransactionScope())
             {
@@ -112,13 +115,11 @@ namespace BusinessLayer
 
         public void PlayerView()
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             aPlayerMapper.GetPlayerView();
         }
 
         public Player DeletePlayer(Player player)
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             Player createdPlayer = null;
             using (TransactionScope scope = new TransactionScope())
             {

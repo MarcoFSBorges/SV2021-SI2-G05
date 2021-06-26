@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9cfcca9e4c6c40caa1ab89a6b694cda3" Name="Diagram1">
+        <EntityTypeShape EntityType="SI2_SVModel.CLAN" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.ITEM" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.LOGIN" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.MATCH" Width="1.5" PointX="6" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.NONREGISTEREDPLAYER" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.PLAYER" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.REGISTEREDPLAYER" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.STATE" Width="1.5" PointX="3.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.TYPE" Width="1.5" PointX="3.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.GLOBAL_CONFIGURATION" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SI2_SVModel.players_view" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SI2_SVModel.FK__REGISTERED__clan__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__ITEM__player_id__30C33EC3" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__REGISTERE__login__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__MATCH__player_on__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__MATCH__player_tw__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__MATCH__state_id__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__MATCH__type_id__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__MATCH__winner__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__NONREGIST__playe__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="SI2_SVModel.FK__REGISTERE__playe__0F624AF8" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

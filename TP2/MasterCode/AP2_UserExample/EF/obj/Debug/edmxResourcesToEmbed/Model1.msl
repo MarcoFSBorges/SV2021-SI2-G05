@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SI2_SVModelStoreContainer" CdmEntityContainer="Jogos_entities">
+    <EntitySetMapping Name="CLAN">
+      <EntityTypeMapping TypeName="SI2_SVModel.CLAN">
+        <MappingFragment StoreEntitySet="CLAN">
+          <ScalarProperty Name="clan_id" ColumnName="clan_id" />
+          <ScalarProperty Name="clan_name" ColumnName="clan_name" />
+          <ScalarProperty Name="clan_score" ColumnName="clan_score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEM">
+      <EntityTypeMapping TypeName="SI2_SVModel.ITEM">
+        <MappingFragment StoreEntitySet="ITEM">
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="player_id" ColumnName="player_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="bonus_life" ColumnName="bonus_life" />
+          <ScalarProperty Name="bonus_strength" ColumnName="bonus_strength" />
+          <ScalarProperty Name="bonus_speed" ColumnName="bonus_speed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGIN">
+      <EntityTypeMapping TypeName="SI2_SVModel.LOGIN">
+        <MappingFragment StoreEntitySet="LOGIN">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATCH">
+      <EntityTypeMapping TypeName="SI2_SVModel.MATCH">
+        <MappingFragment StoreEntitySet="MATCH">
+          <ScalarProperty Name="match_id" ColumnName="match_id" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="player_one" ColumnName="player_one" />
+          <ScalarProperty Name="player_two" ColumnName="player_two" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="winner" ColumnName="winner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NONREGISTEREDPLAYER">
+      <EntityTypeMapping TypeName="SI2_SVModel.NONREGISTEREDPLAYER">
+        <MappingFragment StoreEntitySet="NONREGISTEREDPLAYER">
+          <ScalarProperty Name="player_id" ColumnName="player_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLAYER">
+      <EntityTypeMapping TypeName="SI2_SVModel.PLAYER">
+        <MappingFragment StoreEntitySet="PLAYER">
+          <ScalarProperty Name="player_id" ColumnName="player_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTEREDPLAYER">
+      <EntityTypeMapping TypeName="SI2_SVModel.REGISTEREDPLAYER">
+        <MappingFragment StoreEntitySet="REGISTEREDPLAYER">
+          <ScalarProperty Name="player_id" ColumnName="player_id" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="bank_balance" ColumnName="bank_balance" />
+          <ScalarProperty Name="life_points" ColumnName="life_points" />
+          <ScalarProperty Name="strength_points" ColumnName="strength_points" />
+          <ScalarProperty Name="speed_points" ColumnName="speed_points" />
+          <ScalarProperty Name="clan" ColumnName="clan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATE">
+      <EntityTypeMapping TypeName="SI2_SVModel.STATE">
+        <MappingFragment StoreEntitySet="STATE">
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="state1" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TYPE">
+      <EntityTypeMapping TypeName="SI2_SVModel.TYPE">
+        <MappingFragment StoreEntitySet="TYPE">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="min_life_points" ColumnName="min_life_points" />
+          <ScalarProperty Name="min_strength_points" ColumnName="min_strength_points" />
+          <ScalarProperty Name="min_speed_points" ColumnName="min_speed_points" />
+          <ScalarProperty Name="score" ColumnName="score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GLOBAL_CONFIGURATION">
+      <EntityTypeMapping TypeName="SI2_SVModel.GLOBAL_CONFIGURATION">
+        <MappingFragment StoreEntitySet="GLOBAL_CONFIGURATION">
+          <ScalarProperty Name="config_id" ColumnName="config_id" />
+          <ScalarProperty Name="max_level" ColumnName="max_level" />
+          <ScalarProperty Name="clan_members" ColumnName="clan_members" />
+          <ScalarProperty Name="limit" ColumnName="limit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="players_view">
+      <EntityTypeMapping TypeName="SI2_SVModel.players_view">
+        <MappingFragment StoreEntitySet="players_view">
+          <ScalarProperty Name="player_id" ColumnName="player_id" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="bank_balance" ColumnName="bank_balance" />
+          <ScalarProperty Name="life_points" ColumnName="life_points" />
+          <ScalarProperty Name="strength_points" ColumnName="strength_points" />
+          <ScalarProperty Name="speed_points" ColumnName="speed_points" />
+          <ScalarProperty Name="clan_name" ColumnName="clan_name" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="SI2_SVModel.Store.f_getClanInfo" FunctionImportName="f_getClanInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SI2_SVModel.f_getClanInfo_Result">
+          <ScalarProperty Name="clan_id" ColumnName="clan_id" />
+          <ScalarProperty Name="clan_name" ColumnName="clan_name" />
+          <ScalarProperty Name="clan_score" ColumnName="clan_score" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="SI2_SVModel.Store.f_getPlayerGamesFromYear" FunctionImportName="f_getPlayerGamesFromYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SI2_SVModel.f_getPlayerGamesFromYear_Result">
+          <ScalarProperty Name="match_id" ColumnName="match_id" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="player_one" ColumnName="player_one" />
+          <ScalarProperty Name="player_two" ColumnName="player_two" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="winner" ColumnName="winner" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="createPlayerWithOptions" FunctionName="SI2_SVModel.Store.createPlayerWithOptions" />
+    <FunctionImportMapping FunctionImportName="p_createMatch" FunctionName="SI2_SVModel.Store.p_createMatch" />
+    <FunctionImportMapping FunctionImportName="p_giveItemToPlayer" FunctionName="SI2_SVModel.Store.p_giveItemToPlayer" />
+  </EntityContainerMapping>
+</Mapping>
