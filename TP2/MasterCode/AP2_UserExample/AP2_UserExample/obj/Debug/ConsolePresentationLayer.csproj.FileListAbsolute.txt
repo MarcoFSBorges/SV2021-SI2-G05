@@ -115,3 +115,5 @@ C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\EF.pdb
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\EF.dll.config
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\ConsoleTables.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\ConsoleTables.pdb

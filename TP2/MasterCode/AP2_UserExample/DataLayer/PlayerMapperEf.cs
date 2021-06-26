@@ -2,6 +2,7 @@
 using Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -135,6 +136,11 @@ namespace DataLayer
         }
 
         public IList<Clan> GetClansOrClan(string clanName)
+        {
+            throw new NotImplementedException();
+        }
+
+        DataTable IPlayerMapper.GetPlayerView()
         {
             throw new NotImplementedException();
         }

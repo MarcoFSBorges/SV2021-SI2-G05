@@ -87,49 +87,6 @@ namespace DataLayer
             return player;
         }
 
-        /*public List<Clan> GetClansOrClan(string clanName)
-        {
-            ensureContext();
-
-            List<Clan> result = new List<Clan>();
-            
-            using (SqlCommand cmd = context.con.CreateCommand())
-            {
-                cmd.Transaction = context.tran;
-                bool singleMode = false;
-
-                //equivalent of clanName being null
-                if (clanName.Equals(""))
-                {
-                    cmd.CommandText = "SELECT clan_name FROM Clan;";
-                    cmd.CommandType = CommandType.Text;
-                }
-                else
-                {
-                    singleMode = true;
-                    cmd.CommandText = "SELECT clan_id, clan_name, clan_score FROM Clan WHERE clan_name = @clan_name;";
-                    cmd.CommandType = CommandType.Text;
-                    SqlParameter ClanNameParameter = new SqlParameter("@clan_name", clanName);
-                    cmd.Parameters.Add(ClanNameParameter);
-                }
-
-                using (SqlDataReader dr = cmd.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        result.Add(
-                            new Clan
-                            {
-                                ClanName = (string)dr["clan_name"]
-                            }
-                        );
-                    }
-
-                }
-            }
-            return result;
-        }*/
-
         public Player Delete(Player player)
         {
             EnsureContext();
@@ -151,7 +108,7 @@ namespace DataLayer
             return player;
         }
 
-        public void GetPlayerView()
+        public DataTable GetPlayerView()
         {
             EnsureContext();
             using (SqlCommand cmd = context.con.CreateCommand())
@@ -162,15 +119,8 @@ namespace DataLayer
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    foreach (var column in dataRow.ItemArray)
-                    {
-                        Console.Write(column);
-                        Console.Write("\t");
-                    }
-                    Console.WriteLine();
-                }
+
+                return dt;
             }
         }
 

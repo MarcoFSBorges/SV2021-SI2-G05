@@ -8,7 +8,7 @@ namespace DataLayer
 {
     public class MapperFactory
     {
-        public static IPlayerMapper createPlayerMapper(SolutionType theSolutionType)
+        public static IPlayerMapper CreatePlayerMapper(SolutionType theSolutionType)
         {
             Context ctx = new Context();
             if (theSolutionType.Equals(SolutionType.ADO))

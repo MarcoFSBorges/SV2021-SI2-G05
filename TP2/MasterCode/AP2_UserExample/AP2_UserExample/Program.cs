@@ -2,7 +2,9 @@
 using DataLayer;
 using Model;
 using System;
+using System.Data;
 using System.Collections.Generic;
+using ConsoleTables;
 
 namespace AP2_UserExample
 {
@@ -11,10 +13,7 @@ namespace AP2_UserExample
         static void Main()
         {
             PlayerService playerService = new PlayerService(GetSolutionType());
-
             Run(playerService);
-
-            //TestPlayerView(playerService);
         }
 
         private static SolutionType GetSolutionType()
@@ -26,10 +25,12 @@ namespace AP2_UserExample
             if (keyPressed.KeyChar == '1')
             {
                 res = SolutionType.ADO;
-            } else if (keyPressed.KeyChar == '2')
+            }
+            else if (keyPressed.KeyChar == '2')
             {
                 res = SolutionType.EF;
-            } else
+            }
+            else
             {
                 Environment.Exit(0);
             }
@@ -39,7 +40,7 @@ namespace AP2_UserExample
         private static void Run(PlayerService playerService)
         {
             bool exit = false;
-            while(!exit)
+            while (!exit)
             {
                 Console.Clear();
                 PrintOptions();
@@ -65,9 +66,12 @@ namespace AP2_UserExample
                     case '5':
                         TestReadClans(playerService);
                         break;
+                    case '6':
+                        TestPlayerView(playerService);
+                        break;
                 }
                 Console.WriteLine("\nPress Enter to continue. Esc to exit.");
-                while(keyPressed.Key != ConsoleKey.Enter && !exit)
+                while (keyPressed.Key != ConsoleKey.Enter && !exit)
                 {
                     keyPressed = Console.ReadKey();
                     if (keyPressed.Key == ConsoleKey.Escape)
@@ -86,6 +90,7 @@ namespace AP2_UserExample
             Console.WriteLine("3\tUpdate existing player");
             Console.WriteLine("4\tDelete existing player");
             Console.WriteLine("5\tCheck Clans");
+            Console.WriteLine("6\tPlayers View");
             Console.WriteLine("0\tExit");
         }
 
@@ -149,7 +154,55 @@ namespace AP2_UserExample
 
         private static void TestPlayerView(PlayerService playerService)
         {
-            playerService.PlayerView();
+            DataTable dt = playerService.PlayerView();
+
+            int tableWidth = GetTableWidth(dt);
+
+            var table = new ConsoleTable();
+
+            List<string> names = new List<string>();
+
+            foreach (DataColumn column in dt.Columns)
+            {
+                names.Add(column.ColumnName);
+            }
+
+            table.AddColumn(names);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                object[] entries = new object[tableWidth];
+
+                object[] rowItems = row.ItemArray;
+
+                for (int i = 0; i < tableWidth; i++)
+                {
+                    try
+                    {
+                        entries[i] = rowItems[i];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        entries[i] = "";
+                    }
+                }
+                table.AddRow(entries);
+            }
+
+            table.Write();
+        }
+
+        private static int GetTableWidth(DataTable dt)
+        {
+            int max = 0;
+            foreach (DataRow dataRow in dt.Rows)
+            {
+                if (dataRow.ItemArray.Length > max)
+                {
+                    max = dataRow.ItemArray.Length;
+                }
+            }
+            return max;
         }
 
         private static void TestDeletePlayer(PlayerService playerService)

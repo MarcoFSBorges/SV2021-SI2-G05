@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 
 namespace DataLayer
@@ -11,7 +12,7 @@ namespace DataLayer
     {
         Login Update(Login login);
 
-        void GetPlayerView();
+        DataTable GetPlayerView();
         IList<Clan> GetClansOrClan(string clanName);
 
         void Dispose();

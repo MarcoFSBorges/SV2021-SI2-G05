@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Transactions;
 
 namespace BusinessLayer
@@ -17,10 +18,10 @@ namespace BusinessLayer
         public PlayerService(SolutionType aSolutionType)
         {
             this.aSolutionType = aSolutionType;
-            aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);
+            aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
         }
 
-        public void closeConnection()
+        public void CloseConnection()
         {
             aPlayerMapper.Dispose();
         }
@@ -113,9 +114,10 @@ namespace BusinessLayer
             }
         }
 
-        public void PlayerView()
+        public DataTable PlayerView()
         {
-            aPlayerMapper.GetPlayerView();
+            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
+            return aPlayerMapper.GetPlayerView();
         }
 
         public Player DeletePlayer(Player player)
