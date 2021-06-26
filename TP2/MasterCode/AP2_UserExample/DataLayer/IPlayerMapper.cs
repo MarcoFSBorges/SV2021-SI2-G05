@@ -12,5 +12,6 @@ namespace DataLayer
         Login Update(Login login);
 
         void GetPlayerView();
+        IList<Clan> GetClansOrClan(string clanName);
     }
 }

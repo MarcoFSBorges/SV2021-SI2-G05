@@ -52,3 +52,14 @@ C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\BusinessLayer
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\Model.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\bin\Debug\Model.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete

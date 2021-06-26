@@ -13,12 +13,17 @@ namespace DataLayer
         {
         }
 
-        public Player Create(Player entity)
+        public new Player Create(Player entity)
         {
             throw new NotImplementedException();
         }
 
-        public Player Delete(Player entity)
+        public new Player Delete(Player entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Clan> GetClansOrClan(string clanName)
         {
             throw new NotImplementedException();
         }
@@ -28,12 +33,12 @@ namespace DataLayer
             throw new NotImplementedException();
         }
 
-        public Player Read(int? id)
+        public new Player Read(int? id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Player> ReadAll()
+        public new List<Player> ReadAll()
         {
             throw new NotImplementedException();
         }

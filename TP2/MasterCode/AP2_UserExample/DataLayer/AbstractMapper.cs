@@ -39,7 +39,7 @@ namespace DataLayer
             return null;
         }
 
-        public void ensureContext()
+        public void EnsureContext()
         {
             if (context == null)
             {

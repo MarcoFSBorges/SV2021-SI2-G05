@@ -21,3 +21,9 @@ C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\Model\obj\Deb
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.dll
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\Model.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\Model.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.pdb

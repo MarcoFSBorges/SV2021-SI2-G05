@@ -19,7 +19,7 @@ namespace BusinessLayer
 
         public RegisteredPlayer CreatePlayerWithOptions(RegisteredPlayer player)
         {
-            IRegisteredPlayerMapper aPlayerMapper = MapperFactory.createRegisteredPlayerMapper(aSolutionType);
+            IRegisteredPlayerMapper aPlayerMapper = MapperFactory.CreateRegisteredPlayerMapper(aSolutionType);
             RegisteredPlayer createdPlayer = null;
             using (TransactionScope scope = new TransactionScope())
             {

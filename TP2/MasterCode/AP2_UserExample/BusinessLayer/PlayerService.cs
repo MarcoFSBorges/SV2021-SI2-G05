@@ -18,10 +18,9 @@ namespace BusinessLayer
             this.aSolutionType = aSolutionType;
         }
 
-
-        public IList<Player> readAll()
+        public IList<Player> ReadAll()
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);
+            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             IList<Player> allPlayers = null;
             using (TransactionScope scope = new TransactionScope())
             {
@@ -41,9 +40,33 @@ namespace BusinessLayer
             }
             return allPlayers;
         }
+
+        public IList<Clan> GetClansOrClan(string clanName)
+        {
+            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
+            IList<Clan> clans = null;
+            using (TransactionScope scope = new TransactionScope())
+            {
+                try
+                {
+                    clans = aPlayerMapper.GetClansOrClan(clanName);
+                    scope.Complete();
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    scope.Dispose();
+                }
+            }
+            return clans;
+        }
+
         public Player CreatePlayer(Player player)
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);
+            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             Player createdPlayer = null;
             using (TransactionScope scope = new TransactionScope())
             {
@@ -66,7 +89,7 @@ namespace BusinessLayer
 
         public Login UpdatePlayer(Login login)
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);
+            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             Login newLogin = null;
             using (TransactionScope scope = new TransactionScope())
             {
@@ -89,13 +112,13 @@ namespace BusinessLayer
 
         public void PlayerView()
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);
+            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             aPlayerMapper.GetPlayerView();
         }
 
         public Player DeletePlayer(Player player)
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);
+            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             Player createdPlayer = null;
             using (TransactionScope scope = new TransactionScope())
             {

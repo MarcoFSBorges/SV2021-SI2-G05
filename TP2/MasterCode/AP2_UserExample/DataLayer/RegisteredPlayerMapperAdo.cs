@@ -17,7 +17,7 @@ namespace DataLayer
 
         public RegisteredPlayer CreateWithOptions(RegisteredPlayer player, Item item, Clan clan)
         {
-            ensureContext();
+            EnsureContext();
 
             using (SqlCommand cmd = context.con.CreateCommand())
             {

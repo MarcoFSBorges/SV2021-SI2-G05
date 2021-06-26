@@ -8,16 +8,16 @@ namespace AP2_UserExample
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            PlayerService playerService = new PlayerService(getSolutionType());
+            PlayerService playerService = new PlayerService(GetSolutionType());
 
-            run(playerService);
+            Run(playerService);
 
             //testPlayerView(playerService);
         }
 
-        private static SolutionType getSolutionType()
+        private static SolutionType GetSolutionType()
         {
             SolutionType res = new SolutionType();
             Console.WriteLine("Escolha a Solução:\n1\tADO\n2\tEF\nAny key\tExit");
@@ -36,7 +36,7 @@ namespace AP2_UserExample
             return res;
         }
 
-        private static void run(PlayerService playerService)
+        private static void Run(PlayerService playerService)
         {
             bool exit = false;
             while(!exit)
@@ -51,16 +51,19 @@ namespace AP2_UserExample
                         exit = true;
                         break;
                     case '1':
-                        testGetAllPlayer(playerService);
+                        TestGetAllPlayer(playerService);
                         break;
                     case '2':
-                        testCreatePlayer(playerService);
+                        TestCreatePlayer(playerService);
                         break;
                     case '3':
-                        testUpdatePlayer(playerService);
+                        TestUpdatePlayer(playerService);
                         break;
                     case '4':
-                        testDeletePlayer(playerService);
+                        TestDeletePlayer(playerService);
+                        break;
+                    case '5':
+                        TestReadClans(playerService);
                         break;
                 }
                 Console.WriteLine("\nPress Enter to continue. Esc to exit.");
@@ -82,12 +85,31 @@ namespace AP2_UserExample
             Console.WriteLine("2\tCreate new player");
             Console.WriteLine("3\tUpdate existing player");
             Console.WriteLine("4\tDelete existing player");
+            Console.WriteLine("5\tCheck Clans");
             Console.WriteLine("0\tExit");
         }
 
-        private static void testGetAllPlayer(PlayerService playerService)
+        private static void TestReadClans(PlayerService playerService)
         {
-            IList<Player> allUsers = playerService.readAll();
+            IList<Clan> allClans = playerService.GetClansOrClan("");
+
+            if (allClans.Count == 1)
+            {
+                Clan c = allClans[0];
+                Console.WriteLine("{0}\t{1}\t{2}", c.ClanID, c.ClanName, c.ClanScore);
+            }
+            else
+            {
+                foreach (Clan c in allClans)
+                {
+                    Console.WriteLine(c.ClanName);
+                }
+            }
+        }
+
+        private static void TestGetAllPlayer(PlayerService playerService)
+        {
+            IList<Player> allUsers = playerService.ReadAll();
 
             foreach (Player p in allUsers)
             {
@@ -95,40 +117,48 @@ namespace AP2_UserExample
             }
         }
 
-        private static void testCreatePlayer(PlayerService playerService)
+        private static void TestCreatePlayer(PlayerService playerService)
         {
 
-            Player p = new Player();
-            p.Username = "DummyFather1";
+            Player p = new Player
+            {
+                Username = "DummyFather1"
+            };
 
             playerService.CreatePlayer(p);
         }
 
-        private static void testUpdatePlayer(PlayerService playerService)
+        private static void TestUpdatePlayer(PlayerService playerService)
         {
 
-            Player p = new Player();
-            p.Username = "testerDummy1";
+            Player p = new Player
+            {
+                Username = "testerDummy1"
+            };
 
-            Login l = new Login();
-            l.UserEmail = "newEmail@hotmail.com";
-            l.Username = p.Username;
-            l.Name = "master dummy";
-            l.Password = "VNl8iccweptzX2r";
-            l.Birthday = "1970-03-29";
+            Login l = new Login
+            {
+                UserEmail = "newEmail@hotmail.com",
+                Username = p.Username,
+                Name = "master dummy",
+                Password = "VNl8iccweptzX2r",
+                Birthday = "1970-03-29"
+            };
             playerService.UpdatePlayer(l);
         }
 
-        private static void testPlayerView(PlayerService playerService)
+        private static void TestPlayerView(PlayerService playerService)
         {
             playerService.PlayerView();
         }
 
-        private static void testDeletePlayer(PlayerService playerService)
+        private static void TestDeletePlayer(PlayerService playerService)
         {
 
-            Player p = new Player();
-            p.Username = "DummyFather";
+            Player p = new Player
+            {
+                Username = "DummyFather"
+            };
 
             playerService.DeletePlayer(p);
         }

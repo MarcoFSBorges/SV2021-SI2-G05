@@ -67,3 +67,17 @@ C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\AP2_UserExamp
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\ConsolePresentationLayer.csproj.CopyComplete
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.exe
 C:\Users\marco\Documents\GitHub\SI2\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\ConsolePresentationLayer.csprojAssemblyReference.cache
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\ConsolePresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.exe
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\AP2_UserExample.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.exe.config
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.exe
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\AP2_UserExample.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\BusinessLayer.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\DataLayer.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\Model.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\BusinessLayer.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\DataLayer.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\bin\Debug\Model.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\AP2_UserExample\obj\Debug\ConsolePresentationLayer.csproj.CopyComplete

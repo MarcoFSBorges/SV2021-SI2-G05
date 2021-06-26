@@ -3,9 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
@@ -15,9 +12,9 @@ namespace DataLayer
         { 
         }
 
-        public Player Create(Player player)
+        public new Player Create(Player player)
         {
-            ensureContext();
+            EnsureContext();
 
             using (SqlCommand cmd = context.con.CreateCommand())
             {
@@ -38,7 +35,7 @@ namespace DataLayer
 
         public RegisteredPlayer CreateWithOptions(RegisteredPlayer player, Item item, Clan clan)
         {
-            ensureContext();
+            EnsureContext();
 
             using (SqlCommand cmd = context.con.CreateCommand())
             {
@@ -75,9 +72,52 @@ namespace DataLayer
             return player;
         }
 
-        public Player Delete(Player player)
+        /*public List<Clan> GetClansOrClan(string clanName)
         {
             ensureContext();
+
+            List<Clan> result = new List<Clan>();
+            
+            using (SqlCommand cmd = context.con.CreateCommand())
+            {
+                cmd.Transaction = context.tran;
+                bool singleMode = false;
+
+                //equivalent of clanName being null
+                if (clanName.Equals(""))
+                {
+                    cmd.CommandText = "SELECT clan_name FROM Clan;";
+                    cmd.CommandType = CommandType.Text;
+                }
+                else
+                {
+                    singleMode = true;
+                    cmd.CommandText = "SELECT clan_id, clan_name, clan_score FROM Clan WHERE clan_name = @clan_name;";
+                    cmd.CommandType = CommandType.Text;
+                    SqlParameter ClanNameParameter = new SqlParameter("@clan_name", clanName);
+                    cmd.Parameters.Add(ClanNameParameter);
+                }
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        result.Add(
+                            new Clan
+                            {
+                                ClanName = (string)dr["clan_name"]
+                            }
+                        );
+                    }
+
+                }
+            }
+            return result;
+        }*/
+
+        public new Player Delete(Player player)
+        {
+            EnsureContext();
 
             using (SqlCommand cmd = context.con.CreateCommand())
             {
@@ -98,7 +138,7 @@ namespace DataLayer
 
         public void GetPlayerView()
         {
-            ensureContext();
+            EnsureContext();
             using (SqlCommand cmd = context.con.CreateCommand())
             {
                 cmd.Transaction = context.tran;
@@ -119,14 +159,14 @@ namespace DataLayer
             }
         }
 
-        public Player Read(int? id)
+        public new Player Read(int? id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Player> ReadAll()
+        public new List<Player> ReadAll()
         {
-            ensureContext();
+            EnsureContext();
             List<Player> players = new List<Player>();
 
             using (SqlCommand cmd = context.con.CreateCommand())
@@ -139,11 +179,12 @@ namespace DataLayer
                 {
                     while (dr.Read())
                     {
-                        Player player = new Player();
-
-                        player.Username = (string)dr["username"];
-                        player.PlayerID = (int)dr["player_id"];
-                        player.Deleted = (bool)dr["deleted"];
+                        Player player = new Player
+                        {
+                            Username = (string)dr["username"],
+                            PlayerID = (int)dr["player_id"],
+                            Deleted = (bool)dr["deleted"]
+                        };
 
                         players.Add(player);
                     }
@@ -154,7 +195,7 @@ namespace DataLayer
 
         public Login Update(Login login)
         {
-            ensureContext();
+            EnsureContext();
             using (SqlCommand cmd = context.con.CreateCommand())
             {
                 cmd.Transaction = context.tran;
@@ -182,6 +223,62 @@ namespace DataLayer
                 //é necessário alterar o modelo de column para conter login no ado.net ?
                 return login;
             }
+        }
+
+        IList<Clan> IPlayerMapper.GetClansOrClan(string clanName)
+        {
+            EnsureContext();
+
+            IList<Clan> result = new List<Clan>();
+
+            using (SqlCommand cmd = context.con.CreateCommand())
+            {
+                cmd.Transaction = context.tran;
+                bool singularMode = false;
+                //equivalent of clanName being null
+                if (clanName.Equals(""))
+                {
+                    cmd.CommandText = "SELECT clan_name FROM Clan;";
+                    cmd.CommandType = CommandType.Text;
+                }
+                else
+                {
+                    singularMode = true;
+                    cmd.CommandText = "SELECT clan_id, clan_name, clan_score FROM Clan WHERE clan_name = @clan_name;";
+                    cmd.CommandType = CommandType.Text;
+                    SqlParameter ClanNameParameter = new SqlParameter("@clan_name", clanName);
+                    cmd.Parameters.Add(ClanNameParameter);
+                }
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        if (singularMode)
+                        {
+                            result.Add(
+                                new Clan
+                                {
+                                    ClanID = (int)dr["clan_id"],
+                                    ClanName = (string)dr["clan_name"],
+                                    ClanScore = (int)dr["clan_score"]
+                                }
+                            );
+                        }
+                        else
+                        {
+                            result.Add(
+                                new Clan
+                                {
+                                    ClanName = (string)dr["clan_name"]
+                                }
+                            );
+                        }
+                    }
+
+                }
+            }
+            return result;
         }
     }
 }
