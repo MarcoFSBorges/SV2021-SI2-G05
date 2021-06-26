@@ -26,6 +26,7 @@
     <EntitySetMapping Name="LOGIN">
       <EntityTypeMapping TypeName="SI2_SVModel.LOGIN">
         <MappingFragment StoreEntitySet="LOGIN">
+          <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="login_id" ColumnName="login_id" />
           <ScalarProperty Name="user_email" ColumnName="user_email" />
           <ScalarProperty Name="username" ColumnName="username" />

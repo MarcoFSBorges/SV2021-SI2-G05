@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SI2_SVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SI2_SVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CLAN">
           <Key>
             <PropertyRef Name="clan_id" />
@@ -39,12 +39,6 @@ warning 6002: The table/view 'SI2_SV.dbo.GLOBAL_CONFIGURATION' does not have a p
           <Property Name="bonus_strength" Type="decimal" Precision="4" Scale="2" />
           <Property Name="bonus_speed" Type="decimal" Precision="4" Scale="2" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'SI2_SV.dbo.ITEM_PRICE' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="ITEM_PRICE">
-          <Property Name="item_id" Type="int" />
-          <Property Name="price" Type="decimal" Precision="20" Scale="3" />
-        </EntityType>-->
         <EntityType Name="LOGIN">
           <Key>
             <PropertyRef Name="login_id" />
@@ -55,6 +49,7 @@ warning 6013: The table/view 'SI2_SV.dbo.ITEM_PRICE' does not have a primary key
           <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="birthday" Type="date" Nullable="false" />
+          <Property Name="version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
         <EntityType Name="MATCH">
           <Key>
@@ -133,7 +128,7 @@ warning 6002: The table/view 'SI2_SV.dbo.players_view' does not have a primary k
           <Property Name="item_id" Type="int" />
           <Property Name="name" Type="varchar" MaxLength="100" />
         </EntityType>
-        <Association Name="FK__ITEM__player_id__30C33EC3">
+        <Association Name="FK__ITEM__player_id__3DE82FB7">
           <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
           <End Role="ITEM" Type="Self.ITEM" Multiplicity="*" />
           <ReferentialConstraint>
@@ -146,12 +141,9 @@ warning 6002: The table/view 'SI2_SV.dbo.players_view' does not have a primary k
           </ReferentialConstraint>
         </Association>
         <!--Errors Found During Generation:
-error 6004: The table 'SI2_SV.dbo.ITEM_PRICE' is referenced by a relationship, but cannot be found.
-        <Association Name="FK__ITEM_PRIC__item___339FAB6E" />-->
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__LOGIN__username__02FC7413" />-->
-        <Association Name="FK__MATCH__player_on__2645B050">
+warning 6035: The relationship 'FK__LOGIN__username__10216507' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__LOGIN__username__10216507" />-->
+        <Association Name="FK__MATCH__player_on__336AA144">
           <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
           <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -163,7 +155,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MATCH__player_tw__2739D489">
+        <Association Name="FK__MATCH__player_tw__345EC57D">
           <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
           <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -175,7 +167,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MATCH__state_id__245D67DE">
+        <Association Name="FK__MATCH__state_id__318258D2">
           <End Role="STATE" Type="Self.STATE" Multiplicity="0..1" />
           <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -187,7 +179,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MATCH__type_id__25518C17">
+        <Association Name="FK__MATCH__type_id__32767D0B">
           <End Role="TYPE" Type="Self.TYPE" Multiplicity="0..1" />
           <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -199,7 +191,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MATCH__winner__282DF8C2">
+        <Association Name="FK__MATCH__winner__3552E9B6">
           <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
           <End Role="MATCH" Type="Self.MATCH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -211,7 +203,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NONREGIST__playe__17F790F9">
+        <Association Name="FK__NONREGIST__playe__251C81ED">
           <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
           <End Role="NONREGISTEREDPLAYER" Type="Self.NONREGISTEREDPLAYER" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -223,7 +215,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__REGISTERE__login__114A936A">
+        <Association Name="FK__REGISTERE__login__1E6F845E">
           <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
           <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="*" />
           <ReferentialConstraint>
@@ -235,7 +227,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__REGISTERE__playe__0F624AF8">
+        <Association Name="FK__REGISTERE__playe__1C873BEC">
           <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
           <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -247,7 +239,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__REGISTERED__clan__10566F31">
+        <Association Name="FK__REGISTERED__clan__1D7B6025">
           <End Role="CLAN" Type="Self.CLAN" Multiplicity="0..1" />
           <End Role="REGISTEREDPLAYER" Type="Self.REGISTEREDPLAYER" Multiplicity="*" />
           <ReferentialConstraint>
@@ -311,9 +303,6 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             </CollectionType>
           </ReturnType>
         </Function>
-        <Function Name="f_getPlayerLevel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
-          <Parameter Name="player_id" Type="int" Mode="In" />
-        </Function>
         <Function Name="p_createMatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="player_one" Type="int" Mode="In" />
           <Parameter Name="player_two" Type="int" Mode="In" />
@@ -356,49 +345,48 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
     [players_view].[name] AS [name]
     FROM [dbo].[players_view] AS [players_view]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__ITEM__player_id__30C33EC3" Association="Self.FK__ITEM__player_id__30C33EC3">
+          <AssociationSet Name="FK__ITEM__player_id__3DE82FB7" Association="Self.FK__ITEM__player_id__3DE82FB7">
             <End Role="PLAYER" EntitySet="PLAYER" />
             <End Role="ITEM" EntitySet="ITEM" />
           </AssociationSet>
-          <AssociationSet Name="FK__MATCH__player_on__2645B050" Association="Self.FK__MATCH__player_on__2645B050">
+          <AssociationSet Name="FK__MATCH__player_on__336AA144" Association="Self.FK__MATCH__player_on__336AA144">
             <End Role="PLAYER" EntitySet="PLAYER" />
             <End Role="MATCH" EntitySet="MATCH" />
           </AssociationSet>
-          <AssociationSet Name="FK__MATCH__player_tw__2739D489" Association="Self.FK__MATCH__player_tw__2739D489">
+          <AssociationSet Name="FK__MATCH__player_tw__345EC57D" Association="Self.FK__MATCH__player_tw__345EC57D">
             <End Role="PLAYER" EntitySet="PLAYER" />
             <End Role="MATCH" EntitySet="MATCH" />
           </AssociationSet>
-          <AssociationSet Name="FK__MATCH__state_id__245D67DE" Association="Self.FK__MATCH__state_id__245D67DE">
+          <AssociationSet Name="FK__MATCH__state_id__318258D2" Association="Self.FK__MATCH__state_id__318258D2">
             <End Role="STATE" EntitySet="STATE" />
             <End Role="MATCH" EntitySet="MATCH" />
           </AssociationSet>
-          <AssociationSet Name="FK__MATCH__type_id__25518C17" Association="Self.FK__MATCH__type_id__25518C17">
+          <AssociationSet Name="FK__MATCH__type_id__32767D0B" Association="Self.FK__MATCH__type_id__32767D0B">
             <End Role="TYPE" EntitySet="TYPE" />
             <End Role="MATCH" EntitySet="MATCH" />
           </AssociationSet>
-          <AssociationSet Name="FK__MATCH__winner__282DF8C2" Association="Self.FK__MATCH__winner__282DF8C2">
+          <AssociationSet Name="FK__MATCH__winner__3552E9B6" Association="Self.FK__MATCH__winner__3552E9B6">
             <End Role="PLAYER" EntitySet="PLAYER" />
             <End Role="MATCH" EntitySet="MATCH" />
           </AssociationSet>
-          <AssociationSet Name="FK__NONREGIST__playe__17F790F9" Association="Self.FK__NONREGIST__playe__17F790F9">
+          <AssociationSet Name="FK__NONREGIST__playe__251C81ED" Association="Self.FK__NONREGIST__playe__251C81ED">
             <End Role="PLAYER" EntitySet="PLAYER" />
             <End Role="NONREGISTEREDPLAYER" EntitySet="NONREGISTEREDPLAYER" />
           </AssociationSet>
-          <AssociationSet Name="FK__REGISTERE__login__114A936A" Association="Self.FK__REGISTERE__login__114A936A">
+          <AssociationSet Name="FK__REGISTERE__login__1E6F845E" Association="Self.FK__REGISTERE__login__1E6F845E">
             <End Role="LOGIN" EntitySet="LOGIN" />
             <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
           </AssociationSet>
-          <AssociationSet Name="FK__REGISTERE__playe__0F624AF8" Association="Self.FK__REGISTERE__playe__0F624AF8">
+          <AssociationSet Name="FK__REGISTERE__playe__1C873BEC" Association="Self.FK__REGISTERE__playe__1C873BEC">
             <End Role="PLAYER" EntitySet="PLAYER" />
             <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
           </AssociationSet>
-          <AssociationSet Name="FK__REGISTERED__clan__10566F31" Association="Self.FK__REGISTERED__clan__10566F31">
+          <AssociationSet Name="FK__REGISTERED__clan__1D7B6025" Association="Self.FK__REGISTERED__clan__1D7B6025">
             <End Role="CLAN" EntitySet="CLAN" />
             <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SI2_SVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -449,6 +437,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
           <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="birthday" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="REGISTEREDPLAYER" Relationship="Self.FK__REGISTERE__login__114A936A" FromRole="LOGIN" ToRole="REGISTEREDPLAYER" />
+          <Property Name="version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
         </EntityType>
         <EntityType Name="MATCH">
           <Key>
@@ -727,7 +716,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
             <End Role="REGISTEREDPLAYER" EntitySet="REGISTEREDPLAYER" />
           </AssociationSet>
           <FunctionImport Name="f_getClanInfo" IsComposable="true" ReturnType="Collection(SI2_SVModel.f_getClanInfo_Result)">
-            <Parameter Name="clanName" Mode="In" Type="String" />
+          <Parameter Name="clanName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="f_getPlayerGamesFromYear" IsComposable="true" ReturnType="Collection(SI2_SVModel.f_getPlayerGamesFromYear_Result)">
             <Parameter Name="player_id" Mode="In" Type="Int32" />
@@ -783,6 +772,7 @@ warning 6035: The relationship 'FK__LOGIN__username__02FC7413' has columns that 
           <EntitySetMapping Name="LOGIN">
             <EntityTypeMapping TypeName="SI2_SVModel.LOGIN">
               <MappingFragment StoreEntitySet="LOGIN">
+                <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="login_id" ColumnName="login_id" />
                 <ScalarProperty Name="user_email" ColumnName="user_email" />
                 <ScalarProperty Name="username" ColumnName="username" />

@@ -27,6 +27,7 @@ BEGIN TRY
             name VARCHAR(30) NOT NULL,
             password varchar(100) NOT NULL,
             birthday DATE NOT NULL,
+            version rowVersion NOT NULL,
             PRIMARY KEY (login_id),
             FOREIGN KEY (username) REFERENCES PLAYER(username),
             CONSTRAINT chk_email CHECK (user_email LIKE ('%_@__%.__%')),

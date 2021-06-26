@@ -34,3 +34,14 @@ C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\obj\Debug\EF.csproj.CopyComplete
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\obj\Debug\EF.dll
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\obj\Debug\EF.pdb
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\bin\Debug\EF.dll.config
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\bin\Debug\EF.dll
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\bin\Debug\EF.pdb
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\bin\Debug\EntityFramework.dll
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\bin\Debug\EntityFramework.xml
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\obj\Debug\EF.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\obj\Debug\EF.csproj.CopyComplete
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\obj\Debug\EF.dll
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\obj\Debug\EF.pdb

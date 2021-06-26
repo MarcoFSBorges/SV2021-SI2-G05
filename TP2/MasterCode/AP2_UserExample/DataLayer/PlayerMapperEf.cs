@@ -144,5 +144,40 @@ namespace DataLayer
         {
             throw new NotImplementedException();
         }
+
+        public void OptimisticLocking(Login l)
+        {
+            using (EFcontext = new Jogos_entities())
+            {
+                LOGIN loginRes = EFcontext.LOGIN.SingleOrDefault(b => b.username == l.Username);
+                if (loginRes != null)
+                {
+                    loginRes.user_email = l.UserEmail;
+                    loginRes.name = l.Name;
+                    loginRes.password = l.Password;
+                    loginRes.birthday = DateTime.Parse(l.Birthday);
+                }
+
+                //faz o update diretamente na base de dados
+                EFcontext.Database.ExecuteSqlCommand("UPDATE login SET name = 'Big wolf' WHERE username = 'Muchacha'");
+
+                var saved = false;
+                while (!saved)
+                {
+                    try
+                    {
+                        //tentativa para guardar alterações na base de dados
+                        EFcontext.SaveChanges();
+                        saved = true;
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateConcurrencyException e)
+                    {
+                        e.Entries.Single().Reload();
+                        throw new NotSupportedException(
+                                    "OTIMISTIC LOCKING ERROR: " + e);
+                    }
+                }
+            }
+        }
     }
 }

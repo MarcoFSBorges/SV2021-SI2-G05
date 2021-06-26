@@ -44,3 +44,15 @@ C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Mo
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\EntityFramework.xml
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\Model.dll.config
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\Model.dll
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\Model.pdb
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\EntityFramework.dll
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\EntityFramework.xml
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.dll
+C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\Model\obj\Debug\Model.pdb

@@ -16,5 +16,6 @@ namespace DataLayer
         IList<Clan> GetClansOrClan(string clanName);
 
         void Dispose();
+        void OptimisticLocking(Login l);
     }
 }

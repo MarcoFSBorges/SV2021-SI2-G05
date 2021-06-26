@@ -137,5 +137,9 @@ namespace BusinessLayer
             }
             return createdPlayer;
         }
+        public void OptimisticLocking(Login l)
+        {
+            aPlayerMapper.OptimisticLocking(l);
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace EF
         public string name { get; set; }
         public string password { get; set; }
         public System.DateTime birthday { get; set; }
+        public byte[] version { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<REGISTEREDPLAYER> REGISTEREDPLAYER { get; set; }

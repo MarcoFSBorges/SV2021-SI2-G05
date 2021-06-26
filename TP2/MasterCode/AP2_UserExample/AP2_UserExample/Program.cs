@@ -69,6 +69,9 @@ namespace AP2_UserExample
                     case '6':
                         TestPlayerView(playerService);
                         break;
+                    case '7':
+                        TestOtimisticConcurrency(playerService);
+                        break;
                 }
                 Console.WriteLine("\nPress Enter to continue. Esc to exit.");
                 while (keyPressed.Key != ConsoleKey.Enter && !exit)
@@ -91,6 +94,7 @@ namespace AP2_UserExample
             Console.WriteLine("4\tDelete existing player");
             Console.WriteLine("5\tCheck Clans");
             Console.WriteLine("6\tPlayers View");
+            Console.WriteLine("7\tOtimistic concurrency test - EF");
             Console.WriteLine("0\tExit");
         }
 
@@ -214,6 +218,19 @@ namespace AP2_UserExample
             };
 
             playerService.DeletePlayer(p);
+        }
+
+        private static void TestOtimisticConcurrency(PlayerService playerService)
+        {
+            Login l = new Login
+            {
+                UserEmail = "newEmail@hotmail.com",
+                Username = "Muchacha",
+                Name = "Muchachinha",
+                Password = "VNl8iccweptzX2r",
+                Birthday = "1970-03-29"
+            };
+            playerService.OptimisticLocking(l);
         }
     }
 }

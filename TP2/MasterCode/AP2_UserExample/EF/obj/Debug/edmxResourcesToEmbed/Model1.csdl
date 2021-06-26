@@ -47,6 +47,7 @@
     <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="birthday" Type="DateTime" Nullable="false" Precision="0" />
     <NavigationProperty Name="REGISTEREDPLAYER" Relationship="Self.FK__REGISTERE__login__114A936A" FromRole="LOGIN" ToRole="REGISTEREDPLAYER" />
+    <Property Name="version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
   </EntityType>
   <EntityType Name="MATCH">
     <Key>

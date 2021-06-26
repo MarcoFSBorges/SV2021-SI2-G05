@@ -250,5 +250,10 @@ namespace DataLayer
         {
             throw new NotImplementedException();
         }
+
+        public void OptimisticLocking(Login l)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

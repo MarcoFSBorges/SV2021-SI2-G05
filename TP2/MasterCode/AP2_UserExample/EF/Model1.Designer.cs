@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\GITAUX - CONCURRENCY\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\EF\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
