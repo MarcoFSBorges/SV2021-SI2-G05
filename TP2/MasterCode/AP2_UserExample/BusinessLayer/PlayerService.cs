@@ -64,7 +64,6 @@ namespace BusinessLayer
             return createdPlayer;
         }
 
-
         public Login UpdatePlayer(Login login)
         {
             IPlayerMapper aPlayerMapper = MapperFactory.createPlayerMapper(aSolutionType);

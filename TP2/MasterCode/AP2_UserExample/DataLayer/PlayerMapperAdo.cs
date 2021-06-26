@@ -36,7 +36,7 @@ namespace DataLayer
             return player;
         }
 
-        public RegisteredPLayer CreateWithOptions(RegisteredPLayer player, Item item, Clan clan)
+        public RegisteredPlayer CreateWithOptions(RegisteredPlayer player, Item item, Clan clan)
         {
             ensureContext();
 

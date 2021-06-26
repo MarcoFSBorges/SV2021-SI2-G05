@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class RegisteredPLayer
+    public class RegisteredPlayer
     {
         public int PlayerID { get; set; }
         public int LoginID { get; set; }
