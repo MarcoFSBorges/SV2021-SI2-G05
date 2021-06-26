@@ -69,3 +69,12 @@ C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\Master
 C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\azeve\Desktop\Universidade\2021-SV\SI2\Github\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\EF.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\EF.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\EF.dll.config
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\Model.dll.config
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
