@@ -116,7 +116,6 @@ namespace BusinessLayer
 
         public DataTable PlayerView()
         {
-            IPlayerMapper aPlayerMapper = MapperFactory.CreatePlayerMapper(aSolutionType);
             return aPlayerMapper.GetPlayerView();
         }
 
@@ -137,9 +136,30 @@ namespace BusinessLayer
             }
             return createdPlayer;
         }
+
         public void OptimisticLocking(Login l)
         {
             aPlayerMapper.OptimisticLocking(l);
+        }
+
+        public void CreatePlayerWithOptions(Login login, Item item, Clan clan)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                try
+                {
+                    aPlayerMapper.CreateWithOptions(login, item, clan);
+                    scope.Complete();
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    scope.Dispose();
+                }
+            }
         }
     }
 }

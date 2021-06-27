@@ -77,6 +77,9 @@ namespace AP2_UserExample
                     case '6':
                         GetPlayerView(playerService);
                         break;
+                    case '7':
+                        CreatePlayerWithOptions(playerService);
+                        break;
                     case '9':
                         TestOtimisticConcurrency(playerService);
                         break;
@@ -102,6 +105,7 @@ namespace AP2_UserExample
             Console.WriteLine("4\tDelete existing player");
             Console.WriteLine("5\tCheck Clans");
             Console.WriteLine("6\tPlayers View");
+            Console.WriteLine("7\tCreate new player with item/clan");
             if (EFMode) {
                 Console.WriteLine("9\tOtimistic concurrency test - EF (NOTICE: This will crash the program!)");
             }
@@ -277,6 +281,65 @@ namespace AP2_UserExample
             playerService.DeletePlayer(p);
         }
 
+        private static void CreatePlayerWithOptions(PlayerService playerService)
+        {
+            Console.Clear();
+
+            Console.WriteLine("To register a new player fill the fields bellow:");
+
+            Console.WriteLine("Email:");
+            string email = Console.ReadLine();
+
+            Console.WriteLine("Username:");
+            string username = Console.ReadLine();
+
+            Console.WriteLine("Name:");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Password:");
+            string password = Console.ReadLine();
+
+            Console.WriteLine("Birthday(YYYY-MM-DD):");
+            string birthday = Console.ReadLine();
+
+            Console.WriteLine("To associate a starting item insert it's ID (otherwise press Enter):");
+            string itemId = Console.ReadLine();
+
+            Console.WriteLine("To insert the player in a clan insert the clan's name (otherwise press Enter):");
+            string clanName = Console.ReadLine();
+
+            Login l = new Login
+            {
+                UserEmail = email,
+                Username = username,
+                Name = name,
+                Password = password,
+                Birthday = birthday
+            };
+
+            Clan c = null;
+
+            if (!clanName.Equals(""))
+            {
+                c = new Clan
+                {
+                    ClanName = clanName
+                };
+            }
+
+            Item i = null;
+
+            if (!clanName.Equals(""))
+            {
+                i = new Item
+                {
+                    ItemID = Int32.Parse(itemId)
+                };
+            }
+
+            playerService.CreatePlayerWithOptions(l, i, c);
+        }
+        
         private static void TestOtimisticConcurrency(PlayerService playerService)
         {
             Login l = new Login

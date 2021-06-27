@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace DataLayer
 {
-     public class PlayerMapperAdo : IPlayerMapper
+    public class PlayerMapperAdo : IPlayerMapper
     {
         public readonly Context context;
         public PlayerMapperAdo(Context ctx) 
@@ -48,35 +48,50 @@ namespace DataLayer
             return player;
         }
 
-        public RegisteredPlayer CreateWithOptions(RegisteredPlayer player, Item item, Clan clan)
+        public void CreateWithOptions(Login login, Item item, Clan clan)
         {
             EnsureContext();
 
             using (SqlCommand cmd = context.con.CreateCommand())
             {
                 cmd.Transaction = context.tran;
-                cmd.CommandText = "createPlayerWithOptions";
+                cmd.CommandText = "registerPlayerWithOptions";
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter playerIDParameter = new SqlParameter("@player_id", player.PlayerID);
-                cmd.Parameters.Add(playerIDParameter);
+                SqlParameter userEmailParameter = new SqlParameter("@user_email", login.UserEmail);
+                cmd.Parameters.Add(userEmailParameter);
 
-                SqlParameter loginIDParameter = new SqlParameter("@login_id", player.LoginID);
-                cmd.Parameters.Add(loginIDParameter);
+                SqlParameter usernameParameter = new SqlParameter("@username", login.Username);
+                cmd.Parameters.Add(usernameParameter);
 
-                SqlParameter lifePointsParameter = new SqlParameter("@life_points", player.LifePoints);
-                cmd.Parameters.Add(lifePointsParameter);
+                SqlParameter nameParameter = new SqlParameter("@name", login.Name);
+                cmd.Parameters.Add(nameParameter);
 
-                SqlParameter strengthPointsParameter = new SqlParameter("@strength_points", player.StrengthPoints);
-                cmd.Parameters.Add(strengthPointsParameter);
+                SqlParameter passwordParameter = new SqlParameter("@password", login.Password);
+                cmd.Parameters.Add(passwordParameter);
 
-                SqlParameter speedPointsParameter = new SqlParameter("@speed_points", player.SpeedPoints);
-                cmd.Parameters.Add(speedPointsParameter);
+                SqlParameter birthdayParameter = new SqlParameter("@birthday", login.Birthday);
+                cmd.Parameters.Add(birthdayParameter);
 
-                SqlParameter itemIDParameter = new SqlParameter("@item_id", item.ItemID);
+                SqlParameter itemIDParameter;
+                if (item == null)
+                {
+                    itemIDParameter = new SqlParameter("@item_id", item);
+                } else
+                {
+                    itemIDParameter = new SqlParameter("@item_id", item.ItemID);
+                }
                 cmd.Parameters.Add(itemIDParameter);
 
-                SqlParameter clanIDParameter = new SqlParameter("@clan_id", clan.ClanID);
+                SqlParameter clanIDParameter;
+                if (clan == null)
+                {
+                    clanIDParameter = new SqlParameter("@clan_name", clan);
+                }
+                else
+                {
+                    clanIDParameter = new SqlParameter("@clan_name", clan.ClanName);
+                }
                 cmd.Parameters.Add(clanIDParameter);
 
                 int updated = cmd.ExecuteNonQuery();
@@ -84,7 +99,6 @@ namespace DataLayer
 
                 Console.WriteLine("created {0} registry.", updated);
             }
-            return player;
         }
 
         public Player Delete(Player player)
@@ -193,7 +207,7 @@ namespace DataLayer
             }
         }
 
-        IList<Clan> IPlayerMapper.GetClansOrClan(string clanName)
+        public IList<Clan> GetClansOrClan(string clanName)
         {
             EnsureContext();
 

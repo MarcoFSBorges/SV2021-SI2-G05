@@ -105,7 +105,7 @@ namespace DataLayer
             throw new NotImplementedException();
         }
 
-        DataTable IPlayerMapper.GetPlayerView()
+        public DataTable GetPlayerView()
         {
             using (EFcontext = new Jogos_entities())
             {
@@ -217,6 +217,16 @@ namespace DataLayer
                     }
                 }
             }
+        }
+
+        public RegisteredPlayer CreateWithOptions(RegisteredPlayer player, Item item, Clan clan)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateWithOptions(Login login, Item item, Clan clan)
+        {
+            throw new NotImplementedException();
         }
     }
 }

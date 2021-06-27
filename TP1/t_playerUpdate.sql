@@ -23,8 +23,7 @@ AS BEGIN
         insert into LOGIN (user_email, username, name, password, birthday) VALUES
         (@user_email, @username, @name, @password, @birthday);
         select @login_id = SCOPE_IDENTITY();
-        insert into REGISTEREDPLAYER (player_id, login_id, life_points, strength_points, speed_points) VALUES
-              (@player_id, @login_id, 1, 1, 1);
+        EXEC createPlayerWithOptions @player_id, @login_id, 1, 1, 1, null, null
     END
     else
     BEGIN

@@ -57,12 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IRegisteredPlayerMapper.cs" />
     <Compile Include="PlayerMapperEf.cs" />
     <Compile Include="PlayerMapperAdo.cs" />
     <Compile Include="IPlayerMapper.cs" />
-    <Compile Include="RegisteredPlayerMapperAdo.cs" />
-    <Compile Include="RegisteredPlayerMapperEf.cs" />
     <Compile Include="SolutionType.cs" />
     <Compile Include="MapperFactory.cs" />
     <Compile Include="IMapper.cs" />
