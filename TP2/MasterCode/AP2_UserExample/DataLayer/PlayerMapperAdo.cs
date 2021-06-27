@@ -94,8 +94,7 @@ namespace DataLayer
             using (SqlCommand cmd = context.con.CreateCommand())
             {
                 cmd.Transaction = context.tran;
-                cmd.CommandText = "DELETE FROM Login WHERE username = @username;" +
-                    "UPDATE PLAYER SET deleted=1 WHERE username = @username;";
+                cmd.CommandText = "DELETE FROM Login WHERE username = @username;";
 
                 cmd.CommandType = CommandType.Text; //default
 

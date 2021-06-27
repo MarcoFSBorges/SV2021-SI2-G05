@@ -4,8 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
@@ -54,39 +52,6 @@ namespace DataLayer
         public void Dispose()
         {
             context.Dispose();
-        }
-
-        public void GetPlayerView()
-        {
-            using (EFcontext = new Jogos_entities())
-            {
-                var playersView = EFcontext.players_view.ToList();
-                foreach (var item in playersView)
-                {
-                    Console.WriteLine(""
-                        + item.player_id
-                        + " | "
-                        + item.login_id
-                        + " | "
-                        + item.score
-                        + " | "
-                        + item.level
-                        + " | "
-                        + item.bank_balance
-                        + " | "
-                        + item.life_points
-                        + " | "
-                        + item.strength_points
-                        + " | "
-                        + item.speed_points
-                        + " | "
-                        + item.clan_name
-                        + " | "
-                        + item.item_id
-                        + " | "
-                        + item.name);
-                }
-            }
         }
 
         public Player Read(int? id)
@@ -142,7 +107,81 @@ namespace DataLayer
 
         DataTable IPlayerMapper.GetPlayerView()
         {
-            throw new NotImplementedException();
+            using (EFcontext = new Jogos_entities())
+            {
+                DataTable dt = new DataTable();
+                
+                var playersView = EFcontext.players_view.ToList();
+
+                List<DataColumn> cols = new List<DataColumn>();
+
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "player_id"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "login_id"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "score"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "level"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "bank_balance"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "life_points"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "strength_points"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "speed_points"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "clan_name"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "item_id"
+                });
+                cols.Add(new DataColumn
+                {
+                    ColumnName = "name"
+                });
+
+                dt.Columns.AddRange(cols.ToArray());
+
+                foreach (var entry in playersView)
+                {
+                    DataRow row = dt.NewRow();
+
+                    row["player_id"] = entry.player_id;
+                    row["login_id"] = entry.login_id;
+                    row["score"] = entry.score;
+                    row["level"] = entry.level;
+                    row["bank_balance"] = entry.bank_balance;
+                    row["life_points"] = entry.life_points;
+                    row["strength_points"] = entry.strength_points;
+                    row["speed_points"] = entry.speed_points;
+                    row["clan_name"] = entry.clan_name;
+                    row["item_id"] = entry.item_id;
+                    row["name"] = entry.name;
+
+                    dt.Rows.Add(row);
+                }
+                return dt;
+            }
         }
 
         public void OptimisticLocking(Login l)

@@ -10,6 +10,8 @@ namespace AP2_UserExample
 {
     class Program
     {
+        private static bool EFMode = false;
+
         static void Main()
         {
             while (true) {
@@ -29,9 +31,11 @@ namespace AP2_UserExample
             {
                 case '1':
                     res = SolutionType.ADO;
+                    EFMode = false;
                     break;
                 case '2':
                     res = SolutionType.EF;
+                    EFMode = true;
                     break;
                 default:
                     Console.Clear();
@@ -73,7 +77,7 @@ namespace AP2_UserExample
                     case '6':
                         GetPlayerView(playerService);
                         break;
-                    case '7':
+                    case '9':
                         TestOtimisticConcurrency(playerService);
                         break;
                 }
@@ -98,7 +102,9 @@ namespace AP2_UserExample
             Console.WriteLine("4\tDelete existing player");
             Console.WriteLine("5\tCheck Clans");
             Console.WriteLine("6\tPlayers View");
-            Console.WriteLine("7\tOtimistic concurrency test - EF");
+            if (EFMode) {
+                Console.WriteLine("9\tOtimistic concurrency test - EF (NOTICE: This will crash the program!)");
+            }
             Console.WriteLine("0\tExit");
         }
 
