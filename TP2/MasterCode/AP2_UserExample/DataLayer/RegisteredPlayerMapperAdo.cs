@@ -62,7 +62,7 @@ namespace DataLayer
                 cmd.Parameters.Add(clanIDParameter);
 
                 int updated = cmd.ExecuteNonQuery();
-                context.commit();
+                context.Commit();
 
                 Console.WriteLine("created {0} registry.", updated);
             }

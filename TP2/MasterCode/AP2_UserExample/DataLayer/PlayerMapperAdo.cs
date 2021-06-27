@@ -41,7 +41,7 @@ namespace DataLayer
                 cmd.Parameters.Add(playerNameParameter);
 
                 int updated = cmd.ExecuteNonQuery();
-                context.commit();
+                context.Commit();
 
                 Console.WriteLine("created {0} registry.", updated);
             }
@@ -80,7 +80,7 @@ namespace DataLayer
                 cmd.Parameters.Add(clanIDParameter);
 
                 int updated = cmd.ExecuteNonQuery();
-                context.commit();
+                context.Commit();
 
                 Console.WriteLine("created {0} registry.", updated);
             }
@@ -94,14 +94,18 @@ namespace DataLayer
             using (SqlCommand cmd = context.con.CreateCommand())
             {
                 cmd.Transaction = context.tran;
-                cmd.CommandText = "DELETE FROM Login WHERE username = @username";
+                cmd.CommandText = "DELETE FROM Login WHERE username = @username;" +
+                    "UPDATE PLAYER SET deleted=1 WHERE username = @username;";
+
                 cmd.CommandType = CommandType.Text; //default
 
                 SqlParameter playerNameParameter = new SqlParameter("@username", player.Username);
                 cmd.Parameters.Add(playerNameParameter);
 
                 int deleted = cmd.ExecuteNonQuery();
-                context.commit();
+
+
+                context.Commit();
 
                 Console.WriteLine("deleted {0} registry.", deleted);
             }
@@ -137,7 +141,7 @@ namespace DataLayer
             using (SqlCommand cmd = context.con.CreateCommand())
             {
                 cmd.Transaction = context.tran;
-                cmd.CommandText = "SELECT player_id, username, deleted FROM Player;";
+                cmd.CommandText = "SELECT player_id, username, deleted FROM Player WHERE deleted=0;";
 
 
                 using (SqlDataReader dr = cmd.ExecuteReader())
@@ -180,7 +184,7 @@ namespace DataLayer
                 cmd.Parameters.Add(UsernameParameter);
 
                 int updated = cmd.ExecuteNonQuery();
-                context.commit();
+                context.Commit();
 
                 Console.WriteLine("updated {0} registry.", updated);
 

@@ -40,3 +40,7 @@ C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\Ma
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\TestProject.csproj.CopyComplete
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Users\azeve\Desktop\LEIC\Universidade\2021-SV\SI2\Github\ADO.NET (Example)\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\UnitTestProject.pdb
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\TestProject.csprojAssemblyReference.cache
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\UnitTestProject.dll
+C:\Users\marco\Documents\GitHub\SV2021-SI2-G05\TP2\MasterCode\AP2_UserExample\UnitTestProject\obj\Debug\UnitTestProject.pdb

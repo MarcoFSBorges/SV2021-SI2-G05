@@ -82,7 +82,7 @@ namespace BusinessLayer
                 }
                 catch (Exception e)
                 {
-                    throw e;
+                    Console.WriteLine("This username is unnavailable.");
                 }
                 finally
                 {

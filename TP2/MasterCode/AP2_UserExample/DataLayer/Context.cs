@@ -15,12 +15,12 @@ namespace DataLayer
 
         public SqlTransaction tran;
 
-        public void commit()
+        public void Commit()
         {
             tran.Commit();
         }
 
-        public void rollback()
+        public void Rollback()
         {
             tran.Rollback();
         }
@@ -29,8 +29,10 @@ namespace DataLayer
         public Context()
         {
             //------------------ Manage Connection ----------------------//
-            con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["MasterPiece"].ConnectionString;
+            con = new SqlConnection
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["MasterPiece"].ConnectionString
+            };
             con.Open();
 
             tran = con.BeginTransaction(IsolationLevel.ReadCommitted);

@@ -12,27 +12,32 @@ namespace AP2_UserExample
     {
         static void Main()
         {
-            PlayerService playerService = new PlayerService(GetSolutionType());
-            Run(playerService);
+            while (true) {
+                PlayerService playerService = new PlayerService(GetSolutionType());
+                Run(playerService);
+            }
         }
 
         private static SolutionType GetSolutionType()
         {
+            Console.Clear();
             SolutionType res = new SolutionType();
             Console.WriteLine("Escolha a Solução:\n1\tADO\n2\tEF\nAny key\tExit");
             ConsoleKeyInfo keyPressed = Console.ReadKey();
 
-            if (keyPressed.KeyChar == '1')
+            switch (keyPressed.KeyChar)
             {
-                res = SolutionType.ADO;
-            }
-            else if (keyPressed.KeyChar == '2')
-            {
-                res = SolutionType.EF;
-            }
-            else
-            {
-                Environment.Exit(0);
+                case '1':
+                    res = SolutionType.ADO;
+                    break;
+                case '2':
+                    res = SolutionType.EF;
+                    break;
+                default:
+                    Console.Clear();
+                    Console.WriteLine("Shutting down...");
+                    Environment.Exit(0);
+                    break;
             }
             return res;
         }
@@ -45,29 +50,28 @@ namespace AP2_UserExample
                 Console.Clear();
                 PrintOptions();
                 ConsoleKeyInfo keyPressed = Console.ReadKey();
-                Console.Clear();
                 switch (keyPressed.KeyChar)
                 {
                     case '0':
                         exit = true;
                         break;
                     case '1':
-                        TestGetAllPlayer(playerService);
+                        ReadAllPlayer(playerService);
                         break;
                     case '2':
-                        TestCreatePlayer(playerService);
+                        CreatePlayer(playerService);
                         break;
                     case '3':
-                        TestUpdatePlayer(playerService);
+                        UpdatePlayer(playerService);
                         break;
                     case '4':
-                        TestDeletePlayer(playerService);
+                        DeletePlayer(playerService);
                         break;
                     case '5':
-                        TestReadClans(playerService);
+                        ReadClans(playerService);
                         break;
                     case '6':
-                        TestPlayerView(playerService);
+                        GetPlayerView(playerService);
                         break;
                     case '7':
                         TestOtimisticConcurrency(playerService);
@@ -98,16 +102,23 @@ namespace AP2_UserExample
             Console.WriteLine("0\tExit");
         }
 
-        private static void TestReadClans(PlayerService playerService)
+        private static void ReadClans(PlayerService playerService)
         {
-            IList<Clan> allClans = playerService.GetClansOrClan("");
+            Console.Clear();
+            Console.WriteLine("Insert Clan name for it's details or press Enter to list all Clan names:");
+
+            string input = Console.ReadLine();
+
+            IList<Clan> allClans = playerService.GetClansOrClan(input);
 
             if (allClans.Count == 1)
             {
                 Clan c = allClans[0];
                 Console.WriteLine("{0}\t{1}\t{2}", c.ClanID, c.ClanName, c.ClanScore);
-            }
-            else
+            } else if (allClans.Count == 0)
+            {
+                Console.WriteLine("There's no clan with that name.");
+            } else
             {
                 foreach (Clan c in allClans)
                 {
@@ -116,8 +127,9 @@ namespace AP2_UserExample
             }
         }
 
-        private static void TestGetAllPlayer(PlayerService playerService)
+        private static void ReadAllPlayer(PlayerService playerService)
         {
+            Console.Clear();
             IList<Player> allUsers = playerService.ReadAll();
 
             foreach (Player p in allUsers)
@@ -126,38 +138,72 @@ namespace AP2_UserExample
             }
         }
 
-        private static void TestCreatePlayer(PlayerService playerService)
+        private static void CreatePlayer(PlayerService playerService)
         {
+            Console.Clear();
+
+            Console.WriteLine("Pick username:");
+
+            string input = Console.ReadLine();
 
             Player p = new Player
             {
-                Username = "DummyFather1"
+                Username = input
             };
 
-            playerService.CreatePlayer(p);
+            Player res = playerService.CreatePlayer(p);
+
+            if (res == null)
+            {
+                Console.WriteLine("Try again? (y/n)");
+                ConsoleKeyInfo keyPressed = Console.ReadKey();
+                Console.Clear();
+                switch (keyPressed.KeyChar)
+                {
+                    case 'y':
+                        CreatePlayer(playerService);
+                        break;
+                    case 'n':
+                        break;
+                }
+            }
         }
 
-        private static void TestUpdatePlayer(PlayerService playerService)
+        private static void UpdatePlayer(PlayerService playerService)
         {
+            Console.Clear();
+            Console.WriteLine("To update a player insert the following fields:");
 
-            Player p = new Player
-            {
-                Username = "testerDummy1"
-            };
+            Console.WriteLine("Email:");
+            string email = Console.ReadLine();
+
+            Console.WriteLine("Username:");
+            string username = Console.ReadLine();
+
+            Console.WriteLine("Name:");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Password:");
+            string password = Console.ReadLine();
+
+            Console.WriteLine("Birthday(YYYY-MM-DD):");
+            string birthday = Console.ReadLine();
 
             Login l = new Login
             {
-                UserEmail = "newEmail@hotmail.com",
-                Username = p.Username,
-                Name = "master dummy",
-                Password = "VNl8iccweptzX2r",
-                Birthday = "1970-03-29"
+                UserEmail = email,
+                Username = username,
+                Name = name,
+                Password = password,
+                Birthday = birthday
             };
             playerService.UpdatePlayer(l);
         }
 
-        private static void TestPlayerView(PlayerService playerService)
+        private static void GetPlayerView(PlayerService playerService)
         {
+            Console.Clear();
+
             DataTable dt = playerService.PlayerView();
 
             int tableWidth = GetTableWidth(dt);
@@ -209,12 +255,17 @@ namespace AP2_UserExample
             return max;
         }
 
-        private static void TestDeletePlayer(PlayerService playerService)
+        private static void DeletePlayer(PlayerService playerService)
         {
+            Console.Clear();
+
+            Console.WriteLine("Insert username of player to delete:");
+
+            string input = Console.ReadLine();
 
             Player p = new Player
             {
-                Username = "DummyFather"
+                Username = input
             };
 
             playerService.DeletePlayer(p);

@@ -70,6 +70,10 @@
       <Project>{E715A2DD-502A-4AF5-846E-9555E32B9336}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{FAA9AF42-5DAB-43FC-A0DA-183A4C0322EF}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{60ED18FA-EA4F-4CC0-8172-FA3A95F26A6C}</Project>
       <Name>Model</Name>

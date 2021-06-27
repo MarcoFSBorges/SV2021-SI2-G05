@@ -21,6 +21,8 @@ create or alter view dbo.players_view as
         LEFT JOIN (select player_id, item_id, name, bonus_life, bonus_strength, bonus_speed from ITEM where active = 1) i
             ON r.player_id = i.player_id)
 
+GO
+
 create or alter trigger update_players_view on players_view
 instead of update
 as begin
