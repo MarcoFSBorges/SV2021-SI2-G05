@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace DataLayer
 {
@@ -148,6 +149,8 @@ namespace DataLayer
 
         public List<Player> ReadAll()
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             EnsureContext();
             List<Player> players = new List<Player>();
 
@@ -172,6 +175,8 @@ namespace DataLayer
                     }
                 }
             }
+            stopwatch.Stop();
+            Console.WriteLine("Elapsed Time is {0} ms", stopwatch.ElapsedMilliseconds);
             return players;
         }
 

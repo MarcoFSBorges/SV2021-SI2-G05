@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Diagnostics;
 
 namespace DataLayer
 {
@@ -61,6 +62,8 @@ namespace DataLayer
 
         public List<Player> ReadAll()
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             List<Player> players = new List<Player>();
             using (EFcontext = new Jogos_entities())
             {
@@ -74,6 +77,8 @@ namespace DataLayer
                     });
                 }
             }
+            stopwatch.Stop();
+            Console.WriteLine("Elapsed Time is {0} ms", stopwatch.ElapsedMilliseconds);
             return players;
         }
 
